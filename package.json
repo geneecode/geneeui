@@ -1,0 +1,34 @@
+{
+  "name": "geneeui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geneecode/geneeui.git"
+  },
+  "keywords": [
+    "geneeui",
+    "geneecode",
+    "storybook",
+    "react",
+    "typescript",
+    "dom",
+    "componentlib",
+    "scss",
+    "css",
+    "grid",
+    "ui",
+    "web",
+    "components"
+  ],
+  "author": "GeneeCode.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geneecode/geneeui/issues"
+  },
+  "homepage": "https://github.com/geneecode/geneeui#readme"
+}
