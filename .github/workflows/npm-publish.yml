@@ -19,9 +19,8 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm install  
       - run: npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
-      - run: npm config set username=$NPM_USERNAME
-      - run: npm config set username=$NPM_PASSWORD
-      - run: npm version patch
+      - run: npm config set username=${{secrets.NPM_USERNAME}}
+      - run: npm config set password=${{secrets.NPM_PASSWORD}}
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
