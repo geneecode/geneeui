@@ -1,0 +1,87 @@
+// All font style goes here
+html,
+body {
+    font-family: $secondary-font;
+    @include font-size(14);
+    color: map-get($colors, white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+    color: map-get($colors, light-blue);
+    @include font-size(14);
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: darken($color: map-get($colors, white), $amount: 10%);
+        text-decoration: none;
+    }
+}
+
+.title {
+    font-family: $primary-font;
+    font-weight: 300;
+    @include font-size(18);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    position: relative;
+
+    &:after {
+        content: "";
+        display: block;
+        background: url(/static/images/title-swirl.png) no-repeat left;
+        width: 100%;
+        height: 6px;
+        @include absolute(bottom 0px left 0px);
+        margin-bottom: -12px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $primary-font;
+    font-weight: 600;
+}
+
+h1 {
+    @include font-size(32);
+}
+
+h2 {
+    @include font-size(28);
+}
+
+h3 {
+    @include font-size(24);
+}
+
+h4 {
+    @include font-size(20);
+}
+
+h5 {
+    @include font-size(16);
+}
+
+h6 {
+    @include font-size(12);
+}
+
+p {
+    @include font-size(14);
+    color: map-get($colors, light-blue);
+}
+
+small {
+    @include font-size(12);
+}

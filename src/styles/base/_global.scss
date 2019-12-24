@@ -1,0 +1,104 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+//Storybook Default Class
+.sb-show-main {
+    padding-top: 10px;
+    padding-left: 5px;
+    background-color: rgb(194, 194, 194);
+}
+// .info__show-button {
+//     background: #cb3d57 !important;
+// }
+
+// .info__close-button {
+//     background: #cb3d57 !important;
+// }
+
+label {
+    display: inline-block;
+    width: 100%;
+    color: map-get($colors, light-blue);
+    font-family: $secondary-font;
+    font-weight: map-get($font-weight, semibold);
+    @include font-size(12);
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+
+main {
+    margin-top: 48px;
+    margin-left: 48px;
+    padding: 15px 20px;
+    min-height: calc(100vh - 48px);
+    background-color: map-get($colors, midnight-blue);
+}
+
+.input-md {
+    padding: 12px !important;
+}
+
+.input-lg {
+    padding: 15px !important;
+    @include font-size(12);
+}
+
+.css-1uv5xpw {
+    overflow: initial !important;
+}
+.css-1awhbql {
+    overflow: initial !important;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px 10px transparent;
+    border: solid 3px transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    box-shadow: #8a93a9;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px 10px #8a93a9;
+    border: solid 3px transparent;
+}
+
+.css-172sj8f {
+    display: inline-block !important;
+    white-space: nowrap !important;
+
+    .css-1su1ft1 {
+        width: 130px !important;
+        display: inline-block !important;
+        white-space: normal !important;
+        vertical-align: middle !important;
+        text-align: center !important;
+    }
+
+    .css-c3junj {
+        display: inline-block !important;
+        white-space: normal !important;
+        vertical-align: middle !important;
+        text-align: center !important;
+    }
+}
+
+.css-gnhv4i {
+    background: #000000;
+}
+.css-3f17iq {
+    overflow: initial !important;
+}

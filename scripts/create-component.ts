@@ -4,7 +4,7 @@ import { resolve } from 'path';
 
 const SRC_DIR = resolve(__dirname, '..', 'src');
 const LIB_INDEX_FILEPATH = resolve(SRC_DIR, 'index.ts');
-const LIB_SCSS_FILEPATH = resolve(SRC_DIR, 'styles', 'airokit.scss');
+const LIB_SCSS_FILEPATH = resolve(SRC_DIR, 'styles', 'geneeui.scss');
 const { mkdir, writeFile, readFile } = fs.promises;
 
 function componentTemplate(name: string) {

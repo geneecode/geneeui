@@ -1,0 +1,4 @@
+//Grid Layout
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+@include _assert-ascending($container-max-widths, "$container-max-widths");

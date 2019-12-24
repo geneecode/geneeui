@@ -1,0 +1,209 @@
+.btn {
+    font-family: $secondary-font;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    @include font-size(10);
+
+    padding: 12px 24px;
+    border-radius: 24px;
+    outline: 0px;
+    cursor: pointer;
+}
+
+//default button
+.btn-default {
+    background-color: transparent !important;
+    color: map-get($colors, slate-grey) !important;
+    border: 1px solid map-get($colors, slate-grey) !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: map-get($colors, white) !important;
+        border-color: map-get($colors, white) !important;
+    }
+}
+
+//primary button
+.btn-primary {
+    background-color: map-get($colors, primary) !important;
+    color: map-get($colors, white) !important;
+    border: none !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: darken((map-get($colors, primary)), 10%) !important;
+    }
+}
+
+//secondary button
+.btn-secondary {
+    background-color: map-get($colors, secondary) !important;
+    color: map-get($colors, white) !important;
+    border: none !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: darken((map-get($colors, secondary)), 10%) !important;
+    }
+}
+
+//info button
+.btn-info {
+    background-color: map-get($colors, info) !important;
+    color: map-get($colors, white) !important;
+    border: none !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: darken((map-get($colors, info)), 10%) !important;
+    }
+}
+
+//success button
+.btn-success {
+    background-color: map-get($colors, success) !important;
+    color: map-get($colors, white) !important;
+    border: none !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: darken((map-get($colors, success)), 10%) !important;
+    }
+}
+
+//warning button
+.btn-warning {
+    background-color: map-get($colors, warning) !important;
+    color: map-get($colors, white) !important;
+    border: none !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: darken((map-get($colors, warning)), 10%) !important;
+    }
+}
+
+//danger button
+.btn-danger {
+    background-color: map-get($colors, danger) !important;
+    color: map-get($colors, white) !important;
+    border: none !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: darken((map-get($colors, danger)), 10%) !important;
+    }
+}
+
+//white button
+.btn-white {
+    background-color: transparent !important;
+    color: map-get($colors, white) !important;
+    border: 1px solid map-get($colors, white) !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: white !important;
+        color: map-get($colors, secondary) !important;
+        border-color: map-get($colors, white) !important;
+    }
+}
+
+//small button
+.btn-xs {
+    padding: 6px 12px !important;
+    @include font-size(9);
+}
+
+//small button
+.btn-sm {
+    padding: 9px 18px !important;
+    @include font-size(9);
+}
+
+//medium button
+.btn-md {
+    padding: 12px 24px !important;
+}
+
+//large button
+.btn-lg {
+    padding: 15px 30px !important;
+}
+
+//Button with icon
+.btn-icon {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+
+    i {
+        margin-left: 15px;
+        @include font-size(12);
+    }
+}
+
+.btn-group {
+    display: flex;
+    align-items: center;
+}
+
+.call-flow-options {
+    .btn-group {
+        display: block;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+
+        li {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            border: 1px solid #313851;
+            padding: 5px;
+            cursor: pointer;
+
+            a {
+                max-width: 100%;
+                max-height: 100%;
+                color: map-get($colors, white);
+
+                i {
+                    @include font-size(16);
+                    margin-top: 3px;
+                    margin-left: 3px;
+                }
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: map-get($colors, slate-grey);
+                color: #fff;
+            }
+
+            &:first-child {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+            &:last-child {
+                border-left: none;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            &.selected {
+                background-color: map-get($colors, slate-grey) !important;
+                color: #fff !important;
+            }
+        }
+    }
+}
