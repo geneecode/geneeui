@@ -23,7 +23,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "create:component": "ts-node scripts/create-component.ts",
-    "prepublishOnly": "npm test && npm run lint && npm run build",
+    "prepublishOnly": "npm run build",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
