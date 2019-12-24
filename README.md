@@ -6,20 +6,20 @@ This is a React based implementation of Component Library. This project is activ
 ## Usage
 First install the library
 ```sh
-npm i @geneecode/geneeui
+npm i geneeui --registry (registry coming soon)
 ```
 
 To add the styling you need to add the provided css file. How to import this varies based on your build pipeline. As an example for a simple CRA app, you would do the following:
 
 ```ts
-import '@geneecode/geneeui/dist/geneeui.min.css';
+import 'geneeui/dist/geneeui.min.css';
 ```
 
 After this you can import and use the components. The recommended way is to include individual components from the lib folder to reduce bundle size and allow for tree-shaking. If your pipeline allows import `esnext` or `esm` modules then see the example after this.
 
 ```tsx
 import React from 'react';
-import Button from '@geneecode/geneeui/lib/Button';
+import Button from 'geneeui/lib/Button';
 
 const App: React.FC = () => {
   return (
@@ -35,9 +35,9 @@ export default App;
 We also provide `esm` and `esnext` builds in `lib/esm` and `lib/es` folders respectively. You may use these if your pipeline allows.
 
 ```ts
-import Button from '@geneecode/geneeui/lib/esm/Button';
+import Button from 'geneeui/lib/esm/Button';
 // or
-import Button from '@geneecode/geneeui/lib/es/Button';
+import Button from 'geneeui/lib/es/Button';
 ```
 
 ### Development
