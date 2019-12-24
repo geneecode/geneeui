@@ -1,6 +1,6 @@
 {
   "name": "@geneecode/geneeui",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "GeneeUI is a React based component library, providing everyday use components for building web applications",
   "main": "lib/index.js",
   "module": "lib/esm/index.js",
@@ -49,7 +49,7 @@
     "components"
   ],
   "author": "geneecode.com",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/geneecode/geneeui/issues"
   },
