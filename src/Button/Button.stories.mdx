@@ -1,0 +1,82 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { text, boolean } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
+import { useState } from 'react';
+import Button from './Button';
+
+
+<Meta title='Button' component={Button} />
+
+export const actions = {
+  onClick: action('onClick')
+};
+
+# Button
+With `MDX` we can define a story for `Button` right in the middle of our
+markdown documentation.
+
+## Simple 
+<Preview>
+  <Story name='Simple'>
+      <Button  {...actions}>
+        {text('text', 'I am a button')}
+      </Button>
+  </Story>
+</Preview>
+
+
+## Sizes 
+<Preview>
+  <Story name='With Sizes'>
+      <>
+        <Button {...actions} size="lg" variant="primary">Large</Button>
+        <Button {...actions} size="md" variant="primary">Medium</Button>
+        <Button {...actions} size="sm" variant="primary">Small</Button>
+        <Button {...actions} size="xs" variant="primary">Extra Small</Button>
+      </>
+  </Story>
+</Preview>
+
+## Variants 
+<Preview>
+  <Story name='With Variants'>
+      <>
+        <Button {...actions} >Default</Button>
+        <Button {...actions} variant="primary">Primary</Button>
+        <Button {...actions} variant="secondary">Secondary</Button>
+        <Button {...actions} variant="info">Info</Button>
+        <Button {...actions} variant="success">Success</Button>
+        <Button {...actions} variant="warning">Warning</Button>
+        <Button {...actions} variant="danger">Danger</Button>
+        <Button {...actions} variant="white">White</Button>
+      </>
+  </Story>
+</Preview>
+
+## With Icon 
+<Preview>
+  <Story name='With Icon'>
+    <>
+      <Button {...actions} variant="primary" icon="done">Submit</Button>
+      <Button {...actions} variant="info" size="xs" icon="share">Share</Button>
+    </>
+  </Story>
+</Preview>
+
+## With Knobs 
+<Preview>
+  <Story name='With Knobs'>
+      <Button  
+      {...actions}
+      variant={text("Varianrt","primary")}
+      size={text("Size","xs")} 
+      icon={text("Icon","share")}
+      >
+          {text('text', 'I am a button')}
+      </Button>
+  </Story>
+</Preview>
+
+
+## Props
+<Props of={Button} />
