@@ -26,6 +26,9 @@ export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   * To apply variant to Button 
   **/
   variant?: ButtonVariant;
+  /** 
+ * To apply size to Button 
+ **/
   size?: ButtonSize;
   icon?: string;
 }
