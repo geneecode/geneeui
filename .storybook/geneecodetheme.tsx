@@ -4,7 +4,7 @@ export default create({
   base: 'light',
 
   colorPrimary: '#222945',
-  colorSecondary: '#241358',
+  colorSecondary: '#22ad3e',
 
   // UI
   appBg: 'white',
@@ -23,7 +23,7 @@ export default create({
 
   // Toolbar default and active colors
   barTextColor: '#9D9D9D',
-  barSelectedColor: '#241358',
+  barSelectedColor: '#22ad3e',
   barBg: 'white',
 
 

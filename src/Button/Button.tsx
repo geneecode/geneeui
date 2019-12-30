@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React, { FC, HTMLAttributes, ReactNode } from 'react';
-// import Icon from '../Icon';
+import Icon from '../Icon';
 
 export type ButtonVariant =
   'default' |
@@ -53,7 +53,7 @@ export const Button: FC<ButtonProps> = function ({
       {...props}
     >
       {children}
-      {/* {(!!icon) && <Icon>{icon}</Icon>} */}
+      {(!!icon) && <Icon>{icon}</Icon>}
     </button >
   );
 };

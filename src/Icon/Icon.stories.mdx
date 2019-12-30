@@ -1,0 +1,37 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { text,boolean } from '@storybook/addon-knobs';
+import Icon from './Icon';
+
+
+<Meta title='Icon' component={Icon} />
+
+# Icon
+With `MDX` we can define a story for `Icon` right in the middle of our
+markdown documentation.
+
+## Simple 
+<Preview>
+	<Story name='Simple'>
+    <>
+      <Icon title="Test">build</Icon>
+      <Icon>assignment</Icon>
+      <Icon>code</Icon>
+      <Icon>done_outline</Icon>
+      <p>And much more, Follow The Link</p>
+      <h1>Reference For Icon Names, Click Below</h1>
+      <a href="https://material.io/resources/icons/?style=baseline" target="_blank">Icon Library</a>
+    </>
+  </Story>
+</Preview>
+
+## WithKnobs 
+<Preview>
+	<Story name='WithKnobs'>
+    <>
+      <Icon title={"Title","Test"}>{text("Icon Name","build")}</Icon>
+    </>
+  </Story>
+</Preview>
+
+## Props
+<Props of={Icon} />
