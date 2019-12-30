@@ -48,12 +48,12 @@ export const Button: FC<ButtonProps> = function ({
         'btn',
         `btn-${variant}`,
         { [`btn-${size}`]: size },
-        { 'btn-icon': !!icon }
+        { 'btn-icon': icon }
       )}
       {...props}
     >
       {children}
-      {(!!icon) && <Icon>{icon}</Icon>}
+      {icon && <Icon>{icon}</Icon>}
     </button >
   );
 };
