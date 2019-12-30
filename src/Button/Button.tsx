@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React, { FC, HTMLAttributes, ReactNode } from 'react';
-// import Icon from '../Icon';
+import Icon from '../Icon';
 
 export type ButtonVariant =
   'default' |
@@ -26,6 +26,9 @@ export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   * To apply variant to Button 
   **/
   variant?: ButtonVariant;
+  /** 
+ * To apply size to Button 
+ **/
   size?: ButtonSize;
   icon?: string;
 }
@@ -50,7 +53,7 @@ export const Button: FC<ButtonProps> = function ({
       {...props}
     >
       {children}
-      {/* {(!!icon) && <Icon>{icon}</Icon>} */}
+      {(!!icon) && <Icon>{icon}</Icon>}
     </button >
   );
 };
