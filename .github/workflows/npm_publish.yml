@@ -1,5 +1,5 @@
   
-name: GenbeeUI Publishing to NPM
+name: GeneeUI Publishing to NPM
 
 on:
   push:
