@@ -3,10 +3,11 @@ import { addDecorator, addParameters, configure } from '@storybook/react';
 import { themes } from '@storybook/theming';
 import requireContext from 'require-context.macro';
 import '../src/styles/geneeui.scss';
+import geneecodetheme from './geneecodetheme';
 
 addParameters({
   options: {
-    theme: themes.light,
+    theme: geneecodetheme,
     showSearchBox: true,
     sidebarAnimations: true
   },

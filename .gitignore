@@ -100,5 +100,4 @@ lib/
 tmp/
 
 # Storybook build
-.out
-
+storybook-static
