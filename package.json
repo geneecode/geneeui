@@ -21,7 +21,7 @@
     "build:styles:dev": "node-sass src/styles/geneeui.scss dist/geneeui.css",
     "build:styles:prod": "node-sass src/styles/geneeui.scss dist/geneeui.min.css --output-style compressed",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -c .storybook -o .out",
     "create:component": "ts-node scripts/create-component.ts",
     "prepublishOnly": "npm run build",
     "preversion": "npm run lint",
