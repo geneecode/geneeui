@@ -4,10 +4,10 @@ name: GenbeeUI Publishing to NPM
 on:
   push:
     branches:
-      - 'master'
+      - master
   pull_request:
     branches:
-      - 'master'
+      - master
 
 jobs:
   build:
