@@ -50,9 +50,10 @@ function storiesWithDocTemplate(name: string) {
   return `import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
 import { text, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
+import { useState } from 'react';
 import ${name} from './${name}';
 
-<Meta title='MDX|${name} ' component={${name}} />
+<Meta title='${name} ' component={${name}} />
 
 # ${name}
 With MDX we can define a story for ${name} right in the middle of our
@@ -145,8 +146,8 @@ async function run() {
   const componentFilePath = resolve(componentDir, `${componentName}.tsx`);
   await writeFile(componentFilePath, componentTemplate(componentName));
 
-  const storiesFilePath = resolve(componentDir, `${componentName}.stories.tsx`);
-  await writeFile(storiesFilePath, storiesTemplate(componentName));
+  // const storiesFilePath = resolve(componentDir, `${componentName}.stories.tsx`);
+  // await writeFile(storiesFilePath, storiesTemplate(componentName));
 
   const storiesWithDocFilePath = resolve(componentDir, `${componentName}.stories.mdx`);
   await writeFile(storiesWithDocFilePath, storiesWithDocTemplate(componentName));
@@ -166,7 +167,7 @@ async function run() {
   console.log('Created:');
   console.log(`  ${componentDir}`);
   console.log(`    ${componentFilePath}`);
-  console.log(`    ${storiesFilePath}`);
+  // console.log(`    ${storiesFilePath}`);
   console.log(`    ${storiesWithDocFilePath}`);
   console.log(`    ${testFilePath}`);
   console.log(`    ${scssFilePath}`);

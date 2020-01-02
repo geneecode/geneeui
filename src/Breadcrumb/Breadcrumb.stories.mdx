@@ -1,0 +1,42 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { text, boolean } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
+import Breadcrumb from './Breadcrumb';
+
+<Meta title="Breadcrumb " component={Breadcrumb} />
+
+# Breadcrumb
+
+With MDX we can define a story for Breadcrumb right in the middle of our
+markdown documentation.
+
+## Default
+
+<Preview>
+  <Story name="Simple">
+    {() => {
+      const items = [
+        { to: '/', label: 'Home' },
+        { to: '/breadcrums', label: 'Breadcrumb' }
+      ];
+      return <Breadcrumb items={items} />
+    }}
+  </Story>
+</Preview>
+
+## With Knobs
+
+<Preview>
+  <Story name="Knobs">
+    <Breadcrumb
+      items={[
+        { to: '/', label: text('Label One', 'Home') },
+        { to: '/breadcrums', label: text('Label Two', 'Breadcrumb') },
+      ]}
+    />
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={Breadcrumb} />
