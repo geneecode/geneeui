@@ -1,0 +1,14 @@
+.breadcrumb-item {
+  font-family: $secondary-font;
+  letter-spacing: 0.1em;
+  @include font-size(10);
+
+  padding: 12px 0px;
+  outline: 0px;
+  cursor: pointer;
+}
+
+.breadcrumb-separator{
+  padding: 0px 10px;
+  opacity: 0.5;
+}

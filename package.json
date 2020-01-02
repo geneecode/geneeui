@@ -136,6 +136,7 @@
     "react-phone-input-2": "^2.10.1",
     "react-phone-number-input": "^2.4.1",
     "react-popover": "^0.5.10",
+    "react-router-dom": "^5.1.2",
     "react-select": "^3.0.4",
     "react-switch": "^5.0.1",
     "react-text-mask": "^5.4.3",
