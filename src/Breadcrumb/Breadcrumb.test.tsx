@@ -5,7 +5,7 @@ import Breadcrumb from './Breadcrumb';
 const items = [
   { to: '/', label: 'Home' },
   { to: '/breadcrums', label: 'Breadcrumb' },
-]
+];
 
 //FIXME: This is just a sample test
 it('renders', () => {
