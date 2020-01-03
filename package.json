@@ -1,6 +1,6 @@
 {
   "name": "@geneecode/geneeui",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "GeneeUI is a React based component library, providing everyday use components for building web applications",
   "main": "lib/index.js",
   "module": "lib/esm/index.js",
@@ -110,36 +110,14 @@
   },
   "peerDependencies": {
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "ag-grid-community": "^21.2.2",
-    "ag-grid-react": "^21.2.2"
+    "react-dom": "^16.8.6"
   },
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@storybook/addon-options": "^5.2.6",
-    "@types/react-color": "^3.0.1",
-    "@types/react-flags-select": "^1.1.2",
-    "@types/react-text-mask": "^5.4.6",
     "@types/storybook__react": "^4.0.2",
-    "@wojtekmaj/react-datetimerange-picker": "^2.4.0",
-    "ag-grid-community": "^21.2.2",
-    "ag-grid-react": "^21.2.2",
     "clone": "^2.1.2",
     "clsx": "^1.0.4",
-    "material-design-icons": "^3.0.1",
-    "moment": "^2.24.0",
-    "react-color": "^2.17.3",
-    "react-d3-tree": "^1.15.3",
-    "react-datetime": "^2.16.3",
-    "react-dropzone": "^10.1.10",
-    "react-google-charts": "^3.0.15",
-    "react-phone-input-2": "^2.10.1",
-    "react-phone-number-input": "^2.4.1",
-    "react-popover": "^0.5.10",
-    "react-router-dom": "^5.1.2",
-    "react-select": "^3.0.4",
-    "react-switch": "^5.0.1",
-    "react-text-mask": "^5.4.3",
-    "react-tiny-popover": "^3.4.5"
+    "material-design-icons": "^3.0.1"
   }
 }
