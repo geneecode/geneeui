@@ -1,0 +1,167 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { text, boolean, number } from '@storybook/addon-knobs';
+import Container from './Container';
+import Row from '../Row';
+import Col from '../Col';
+
+
+<Meta title='Grid' component={Container} />
+
+export const cellStyles = {
+  style: {
+    backgroundColor: 'rgba(86,61,124,.75)',
+    border: '1px solid rgba(86,61,124,1)',
+    height: '50px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
+};
+
+
+# Grid
+## Using Container
+With `MDX` we can define a story for `Grid` right in the middle of our
+markdown documentation.
+
+## Auto Layout 
+<Preview>
+	<Story name='Auto Layout'>
+      <Container>
+    <Row>
+      <Col {...cellStyles}>No size specified</Col>
+      <Col {...cellStyles}>No size specified</Col>
+      <Col {...cellStyles}>No size specified</Col>
+    </Row>
+    <Row>
+      <Col {...cellStyles}>No size specified</Col>
+      <Col {...cellStyles}>No size specified</Col>
+      <Col {...cellStyles}>No size specified</Col>
+      <Col {...cellStyles}>No size specified</Col>
+      <Col {...cellStyles}>No size specified</Col>
+      <Col {...cellStyles}>No size specified</Col>
+    </Row>
+  </Container>
+  </Story>
+</Preview>
+
+## Specific Sizes 
+<Preview>
+  <Story name='Specific Sizes'>
+		<Container>
+    <Row>
+      <Col {...cellStyles} size={4}>size=4</Col>
+      <Col {...cellStyles} size={16}>size=16</Col>
+      <Col {...cellStyles} size={4}>size=4</Col>
+    </Row>
+    <Row>
+      <Col {...cellStyles} size={10}>size=10</Col>
+      <Col {...cellStyles} size={4}>size=4</Col>
+      <Col {...cellStyles} size={10}>size=10</Col>
+    </Row>
+  </Container>
+  </Story>
+</Preview>
+
+## Mixed 
+<Preview>
+  <Story name='Mixed'>
+  <Container>
+    <Row>
+      <Col {...cellStyles} size={6}>size=6</Col>
+      <Col {...cellStyles} size={15}>size=15</Col>
+      <Col {...cellStyles}>No size specified</Col>
+    </Row>
+    <Row>
+      <Col {...cellStyles} size={5}>size=5</Col>
+      <Col {...cellStyles}>No size specified</Col>
+      <Col {...cellStyles} size={4}>size=4</Col>
+    </Row>
+  </Container>
+  </Story>
+</Preview>
+
+## Offsets 
+<Preview>
+  <Story name='Offsets'>
+  <Container>
+    <Row>
+      <Col {...cellStyles} size={16} offset={4}>
+        size=16 offset=4
+      </Col>
+      <Col {...cellStyles} size={4}>size=4</Col>
+    </Row>
+    <Row>
+      <Col {...cellStyles} size={12} offset={6}>size=12 offset=6</Col>
+    </Row>
+    <Row>
+      <Col {...cellStyles} size={10}>size=10</Col>
+      <Col {...cellStyles} size={10} offset={4}>size=10 offset=4</Col>
+    </Row>
+  </Container>
+  </Story>
+</Preview>
+
+## Responsive 
+<Preview>
+  <Story name='Responsive'>
+    <Container>
+    <Row>
+      <Col {...cellStyles} md={4} sm={8}>md=4 sm=8</Col>
+      <Col {...cellStyles} md={16} sm={8}>md=16 sm=8</Col>
+      <Col {...cellStyles} md={4} sm={8}>md=4 sm=8</Col>
+    </Row>
+    <Row>
+      <Col {...cellStyles} md={10} sm={4}>md=10 sm=4</Col>
+      <Col {...cellStyles} md={4} sm={16}>md=4 sm=16</Col>
+      <Col {...cellStyles} md={10} sm={4}>md=10 sm=4</Col>
+    </Row>
+  </Container>
+  </Story>
+</Preview>
+
+## Fluid 
+<Preview>
+  <Story name='Fluid'>
+    <Container fluid>
+    <Row>
+      <Col {...cellStyles} size={4}>size=4</Col>
+      <Col {...cellStyles} size={16}>size=16</Col>
+      <Col {...cellStyles} size={4}>size=4</Col>
+    </Row>
+    <Row>
+      <Col {...cellStyles} size={10}>size=10</Col>
+      <Col {...cellStyles} size={4}>size=4</Col>
+      <Col {...cellStyles} size={10}>size=10</Col>
+    </Row>
+  </Container>
+  </Story>
+</Preview>
+
+## WithKnobs 
+<Preview>
+  <Story name='WithKnobs'>
+    <Container fluid={boolean("Fluid",true)}>
+    <Row>
+      <Col {...cellStyles} size={number("Size",4)}>Adjust Size Here</Col>
+      <Col {...cellStyles} md={number("md",4)} sm={number("sm",8)} >Adjust Responsiveness Here</Col>
+      <Col {...cellStyles} size={10} offset={number("Offset",4)}>Adjust Offset Here</Col>
+    </Row>
+    <Row>
+      <Col {...cellStyles} size={10}>size=10</Col>
+      <Col {...cellStyles} size={4}>size=4</Col>
+      <Col {...cellStyles} size={10}>size=10</Col>
+    </Row>
+  </Container>
+  </Story>
+</Preview>
+
+
+## Props for Container
+<Props of={Container} />
+
+## Props for Row
+<Props of={Row} />
+
+## Props for Column
+<Props of={Col} />
