@@ -1,6 +1,6 @@
 {
   "name": "@geneecode/geneeui",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "GeneeUI is a React based component library, providing everyday use components for building web applications",
   "main": "lib/index.js",
   "module": "lib/esm/index.js",
