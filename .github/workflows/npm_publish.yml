@@ -2,9 +2,6 @@
 name: GeneeUI Publishing to NPM
 
 on:
-  push:
-    branches:
-      - master
   pull_request:
     branches:
       - master
