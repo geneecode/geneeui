@@ -1,0 +1,96 @@
+//Select Input
+.input-select {
+  width: 100%;
+  padding: 9px;
+  background-color: transparent;
+  color: map-get($colors, light-blue);
+  border: 1px solid map-get($colors, light-blue);
+  border-radius: 5px;
+  outline: none;
+  font-family: $secondary-font;
+  @include font-size(12);
+  margin-bottom: 10px;
+
+  &:focus,
+  &:active {
+    border: 1px solid map-get($colors, white);
+    color: map-get($colors, white);
+    outline: none;
+  }
+
+  > option {
+    color: map-get($colors, midnight-blue);
+    background-color: map-get($colors, tertiary);
+    font-family: $secondary-font;
+    @include font-size(13);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: map-get($colors, light-blue);
+    }
+  }
+}
+
+.custom-select {
+  .custom-select__control {
+    background-color: transparent !important;
+    color: map-get($colors, light-blue) !important;
+    border: 1px solid map-get($colors, light-blue) !important;
+    border-radius: 5px !important;
+    box-shadow: none !important;
+    outline: none;
+    font-family: $secondary-font;
+    @include font-size(12);
+
+    .custom-select__single-value {
+      color: map-get($colors, white);
+    }
+
+    .custom-select__indicator-separator {
+      background-color: map-get($colors, light-blue) !important;
+    }
+
+    .custom-select__indicator {
+      svg {
+        fill: map-get($colors, light-blue) !important;
+      }
+    }
+
+    .custom-select__multi-value {
+      background-color: map-get($colors, white);
+    }
+
+    .custom-select__input {
+      color: map-get($colors, light-blue);
+    }
+  }
+
+  &.error-input {
+    .custom-select__control {
+      border: 1px solid map-get($colors, danger) !important;
+      margin-bottom: 2px;
+
+      &:hover,
+      &:active,
+      &:focus {
+        border: 1px solid map-get($colors, danger) !important;
+      }
+    }
+  }
+
+  .custom-select__menu {
+    .custom-select__option {
+      color: map-get($colors, secondary) !important;
+
+      &.custom-select__option--is-focused {
+        background-color: map-get($colors, select-grey) !important;
+      }
+
+      &.custom-select__option--is-selected {
+        background-color: map-get($colors, border-color) !important;
+        color: map-get($colors, white) !important;
+      }
+    }
+  }
+}

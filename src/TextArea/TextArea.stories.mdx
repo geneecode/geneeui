@@ -1,0 +1,47 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { text } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
+import TextArea from './TextArea';
+
+
+<Meta title='Inputs/TextArea' component={TextArea} />
+
+export const actions = {
+  onFocus: action('onFocus')
+};
+
+# TextArea
+With `MDX` we can define a story for `TextArea` right in the middle of our
+markdown documentation.
+
+## Simple 
+<Preview>
+	<Story name='Simple'>
+      <TextArea
+        {...actions}
+        label="Simple TextArea"
+        rows={4}
+        cols={50}
+        placeholder="Brief something"
+      />
+  </Story>
+</Preview>
+
+## Error 
+<Preview>
+  <Story name='Error'>
+		<TextArea
+      {...actions}
+      label="TextArea with Error"
+      rows={4}
+      cols={50}
+      error={true}
+      errormessage={"Field is Required!"}
+      placeholder="Brief something"
+    />
+  </Story>
+</Preview>
+
+
+## Props
+<Props of={TextArea} />

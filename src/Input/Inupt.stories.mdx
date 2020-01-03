@@ -1,0 +1,80 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { text } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
+import Input from './Input';
+
+
+<Meta title='Inputs/Input' component={Input} />
+
+export const actions = {
+  onFocus: action('onFocus')
+};
+
+# Input
+With `MDX` we can define a story for `Input` right in the middle of our
+markdown documentation.
+
+## Simple 
+<Preview>
+	<Story name='Simple'>
+    <Input
+      {...actions}
+      label="Regular Input"
+      placeholder="Please enter some text"
+    />
+  </Story>
+</Preview>
+
+## Password 
+<Preview>
+	<Story name='Password'>
+    <Input
+      {...actions}
+      type="password"
+      label="Password Input"
+      placeholder="Please enter your password"
+    />
+  </Story>
+</Preview>
+
+## Email 
+<Preview>
+	<Story name='Email'>
+    <Input
+      {...actions}
+      type="email"
+      label="Email Input"
+      placeholder="Please enter your email address"
+    />
+  </Story>
+</Preview>
+
+## Number 
+<Preview>
+	<Story name='Number'>
+    <Input
+      {...actions}
+      type="number"
+      label="Number Input"
+      placeholder="Please enter a number"
+    />
+  </Story>
+</Preview>
+
+## Error 
+<Preview>
+	<Story name='Error'>
+    <Input
+      {...actions}
+      type="number"
+      label="Number Input"
+      error={true}
+      errormessage={"This is Error"}
+      placeholder="Please enter a number"
+    />
+  </Story>
+</Preview>
+
+
+## Props
+<Props of={Input} />
