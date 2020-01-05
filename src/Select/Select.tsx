@@ -1,7 +1,7 @@
-import clsx from 'clsx';
 import React, { ComponentProps, FC } from 'react';
 import ReactSelect from 'react-select';
-import { Icon } from '..';
+import clsx from 'clsx';
+import Icon from '../Icon';
 
 //FIXME: Find a way to omit props while maintaining typing
 export interface SelectProps extends ComponentProps<typeof ReactSelect> {
