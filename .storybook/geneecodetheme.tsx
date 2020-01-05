@@ -12,9 +12,8 @@ export default create({
   appBorderColor: '#FFFFFF',
   appBorderRadius: 4,
 
-
   // Typography
-  fontBase: '"Josefin Sans", sans-serif',
+  fontBase: '"Poppins", sans-serif',
   fontCode: 'monospace',
 
   // Text colors
@@ -26,8 +25,7 @@ export default create({
   barSelectedColor: '#22ad3e',
   barBg: 'white',
 
-
   brandTitle: 'GeneeCode',
   brandUrl: 'https://geneecode.com',
-  brandImage: require('./GeneeCodeLogoHorizontal.png')
+  brandImage: require('./GeneeCodeLogoHorizontal.png'),
 });
