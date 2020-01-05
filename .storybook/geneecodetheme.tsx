@@ -26,6 +26,6 @@ export default create({
   barBg: 'white',
 
   brandTitle: 'GeneeCode',
-  brandUrl: 'https://geneecode.com',
+  brandUrl: 'https://geneecode.com/geneeui',
   brandImage: require('./GeneeCodeLogoHorizontal.png'),
 });
