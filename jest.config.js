@@ -19,5 +19,6 @@ module.exports = {
   moduleNameMapper: {
     '\\.s?css$': 'identity-obj-proxy'
   },
-  'coverageDirectory': '../coverage'
+  'coverageDirectory': '../coverage',
+  "testEnvironment": "jest-environment-jsdom-fourteen"
 };
