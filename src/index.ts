@@ -6,3 +6,4 @@ export { default as Container, ContainerProps } from './Container';
 export { default as Input, InputProps } from "./Input";
 export { default as TextArea, TextAreaProps } from "./TextArea";
 export { default as Select, SelectProps } from "./Select";
+export { default as Table, TableProps } from "./Table";

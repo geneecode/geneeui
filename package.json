@@ -1,6 +1,6 @@
 {
   "name": "@geneecode/geneeui",
-  "version": "0.0.13",
+  "version": "0.0.15",
   "description": "GeneeUI is a React based component library, providing everyday use components for building web applications",
   "main": "lib/index.js",
   "module": "lib/esm/index.js",
@@ -111,6 +111,8 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
+    "ag-grid-community": "^22.1.1",
+    "ag-grid-react": "^22.1.1",
     "clsx": "^1.0.4",
     "material-design-icons": "^3.0.1",
     "react-select": "^3.0.8"

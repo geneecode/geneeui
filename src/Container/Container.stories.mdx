@@ -1,5 +1,4 @@
 import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
-import { text, boolean, number } from '@storybook/addon-knobs';
 import Container from './Container';
 import Row from '../Row';
 import Col from '../Col';
@@ -137,25 +136,6 @@ markdown documentation.
   </Container>
   </Story>
 </Preview>
-
-## WithKnobs 
-<Preview>
-  <Story name='WithKnobs'>
-    <Container fluid={boolean("Fluid",true)}>
-    <Row>
-      <Col {...cellStyles} size={number("Size",4)}>Adjust Size Here</Col>
-      <Col {...cellStyles} md={number("md",4)} sm={number("sm",8)} >Adjust Responsiveness Here</Col>
-      <Col {...cellStyles} size={10} offset={number("Offset",4)}>Adjust Offset Here</Col>
-    </Row>
-    <Row>
-      <Col {...cellStyles} size={10}>size=10</Col>
-      <Col {...cellStyles} size={4}>size=4</Col>
-      <Col {...cellStyles} size={10}>size=10</Col>
-    </Row>
-  </Container>
-  </Story>
-</Preview>
-
 
 ## Props for Container
 <Props of={Container} />

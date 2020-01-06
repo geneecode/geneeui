@@ -1,5 +1,4 @@
-import { withKnobs } from '@storybook/addon-knobs';
-import { addDecorator, addParameters, configure } from '@storybook/react';
+import { addParameters, configure } from '@storybook/react';
 import requireContext from 'require-context.macro';
 import geneecodetheme from './geneecodetheme';
 import '../src/styles/geneeui.scss';
