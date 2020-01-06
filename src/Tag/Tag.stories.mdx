@@ -1,0 +1,27 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { useState } from 'react';
+import Tag from './Tag';
+
+<Meta title='Tag ' component={Tag} />
+
+export const actions = {
+  onClick: action('onClick')
+};
+
+# Tag
+With MDX we can define a story for Tag right in the middle of our
+markdown documentation.
+
+## Default 
+<Preview>
+  <Story name='Simple'>
+    <Tag  {...actions}>I'm a Tag Example</Tag>
+  </Story>
+</Preview>
+
+
+
+## Props
+<Props of={Tag} />
+

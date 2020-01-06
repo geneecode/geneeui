@@ -301,3 +301,27 @@ $simple-trans: all 0.5s ease;
     $num: $size / $columns;
     margin-left: if($num == 0, 0, percentage($num));
 }
+
+// Theme Mixins
+
+@mixin darkTheme() {
+    .geneeui-dark & {
+        @content;
+    }
+}
+@mixin lightTheme() {
+    .geneeui-light & {
+        @content;
+    }
+}
+.themed-content {
+    @include darkTheme() {
+        // background-color: map-get($colors, black);
+        // color: map-get($colors, white);
+    }
+
+    @include lightTheme() {
+        // background-color: map-get($colors, white);
+        // color: map-get($colors, black);
+    }
+}

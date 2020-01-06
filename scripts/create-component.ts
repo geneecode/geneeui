@@ -48,9 +48,7 @@ export const simple = () => <${name} {...actions}>{text('text', 'I am a ${name}'
 
 function storiesWithDocTemplate(name: string) {
   return `import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
-import { text, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
-import { useState } from 'react';
 import ${name} from './${name}';
 
 <Meta title='${name} ' component={${name}} />
@@ -60,28 +58,18 @@ With MDX we can define a story for ${name} right in the middle of our
 markdown documentation.
 
 
-
 ## Default 
 <Preview>
   <Story name='Simple'>
     {
       ()=>{
-  const [activeAcc, setActiveAcc] = useState('');
     return(
-      <${name}  onClick={action('onClick')}>{text('text', 'I am a ${name}')}</${name}>
+      <${name}  onClick={action('onClick')}>${name}</${name}>
         )
       }
     }
   </Story>
 </Preview>
-
-## With Knobs 
-<Preview>
-<Story name='Knobs'>
-      <${name} onClick={action('onClick')} >{text('text', 'I am a ${name}')}</${name}>
-</Story>
-</Preview>
-
 
 
 ## Props

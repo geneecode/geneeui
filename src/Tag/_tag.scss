@@ -1,0 +1,11 @@
+.tag-item {
+    display: inline-block;
+    background-color: map-get($colors, sub-menu);
+    color: map-get($colors, white);
+    border: 1px solid map-get($colors, sub-menu);
+    border-radius: 20px;
+    padding: 10px 20px;
+    @include font-size(13);
+    line-height: 1;
+    white-space: nowrap;
+}
