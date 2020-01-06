@@ -1,0 +1,85 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import Table from './Table';
+
+
+<Meta title='Table' component={Table} />
+
+export const actions = {
+  onClick: action('onClick')
+};
+
+# Table
+With `MDX` we can define a story for `Table` right in the middle of our
+markdown documentation.
+
+export  function createData(firstname, lastname, designation, company) {
+    return { firstname, lastname, designation, company };
+  };
+
+export const columnDefs = [
+    {
+      headerName: "First Name",
+      field: "firstname",
+      sortable: true,
+      filter: true,
+      checkboxSelection: true,
+      editable: true,
+      minWidth: 110
+    },
+    {
+      headerName: "Last Name",
+      field: "lastname",
+      sortable: true,
+      filter: true,
+      minWidth: 110
+    },
+    {
+      headerName: "Designation",
+      field: "designation",
+      sortable: true,
+      filter: true,
+      minWidth: 110
+    },
+    {
+      headerName: "Company",
+      field: "company",
+      sortable: true,
+      filter: true,
+      minWidth: 110
+    },
+  ];
+
+export const rowData = [
+    createData('John', 'Doe', 'Senior Software Engr.', 'FooBar Inc.'),
+    createData('John', 'Doe', 'Senior Software Engr.', 'FooBar Inc.'),
+    createData('John', 'Doe', 'Senior Software Engr.', 'FooBar Inc.'),
+    createData('John', 'Doe', 'Senior Software Engr.', 'FooBar Inc.'),
+    createData('John', 'Doe', 'Senior Software Engr.', 'FooBar Inc.'),
+    createData('John', 'Doe', 'Senior Software Engr.', 'FooBar Inc.'),
+    createData('Jane', 'Doe', 'Software Engr.', 'FooBar Inc.'),
+    createData('Jane', 'Doe', 'Software Engr.', 'FooBar Inc.'),
+    createData('Jane', 'Doe', 'Software Engr.', 'FooBar Inc.'),
+    createData('Jane', 'Doe', 'Software Engr.', 'FooBar Inc.'),
+    createData('Jane', 'Doe', 'Software Engr.', 'FooBar Inc.'),
+    createData('Jane', 'Doe', 'Software Engr.', 'FooBar Inc.'),
+    createData('John', 'Jane', 'Analyst Software Engr.', 'FooBar Inc.'),
+    createData('John', 'Jane', 'Analyst Software Engr.', 'FooBar Inc.'),
+    createData('John', 'Jane', 'Analyst Software Engr.', 'FooBar Inc.'),
+    createData('John', 'Jane', 'Analyst Software Engr.', 'FooBar Inc.'),
+    createData('John', 'Jane', 'Analyst Software Engr.', 'FooBar Inc.'),
+    createData('John', 'Jane', 'Analyst Software Engr.', 'FooBar Inc.'),
+  ];
+
+## Simple 
+<Preview>
+	<Story name='Simple'>
+      <Table
+        columnDefs={columnDefs}
+        rowData={rowData}
+        pagination={true}
+        paginationPageSize={8}
+      />
+  </Story>
+</Preview>
+

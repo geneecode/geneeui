@@ -1,8 +1,7 @@
-import { withKnobs } from '@storybook/addon-knobs';
-import { addDecorator, addParameters, configure } from '@storybook/react';
+import { addParameters, configure } from '@storybook/react';
 import requireContext from 'require-context.macro';
-import '../src/styles/geneeui.scss';
 import geneecodetheme from './geneecodetheme';
+import '../src/styles/geneeui.scss';
 
 addParameters({
   options: {
@@ -11,8 +10,6 @@ addParameters({
     sidebarAnimations: true
   },
 });
-
-addDecorator(withKnobs);
 
 const loader = () => {
 

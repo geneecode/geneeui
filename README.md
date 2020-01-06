@@ -10,6 +10,9 @@
 # GeneeUI
 This is a React based implementation of Component Library. This project is actively being developed, so expect changes/additions. The basic usage is outlined below.
 
+## Checkout Storybook at 
+<a href="http://geneecode.com/geneeui" target="_blank" >Click me to Open Storybook</a>
+
 ## Usage
 First install the library
 ```sh
