@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { FC, InputHTMLAttributes } from 'react';
+import React, { forwardRef, InputHTMLAttributes } from 'react';
 import Icon from '../Icon';
 
 
@@ -14,20 +14,21 @@ export interface InputProps
   type?: 'text' | 'email' | 'password' | 'number' | 'search';
 }
 
-const Input: FC<InputProps> = function ({
+const Input = forwardRef<HTMLInputElement, InputProps>(function ({
   type = 'text',
   className,
   errormessage,
   error,
   label,
   ...props
-}) {
+}, ref) {
   return (
     <>
       {label ? <label>{label}</label> : null}
       <input
         className={clsx(error ? "form-input error-input" : "form-input", className)}
         type={type}
+        ref={ref}
         {...props}
       />
       {error ?
@@ -39,6 +40,6 @@ const Input: FC<InputProps> = function ({
 
     </>
   );
-};
+});
 
 export default Input;

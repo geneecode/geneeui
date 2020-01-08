@@ -17,6 +17,6 @@ module.exports = [
     name: '@storybook/preset-scss'
   },
   {
-    name: '@storybook/addon-docs/react/preset'
+    name: '@storybook/addon-docs/preset'
   }
 ];

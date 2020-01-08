@@ -8,49 +8,47 @@ const LIB_SCSS_FILEPATH = resolve(SRC_DIR, 'styles', 'geneeui.scss');
 const { mkdir, writeFile, readFile } = fs.promises;
 
 function componentTemplate(name: string) {
-  return `import React, { FC, ReactNode } from 'react';
+  return `import React, { forwardRef, ReactNode } from 'react';
 
 export interface ${name}Props {
   children?: ReactNode;
   onClick?: () => void;
 }
 
-const ${name}: FC<${name}Props> = function ({ children, onClick }) {
+const ${name} = forwardRef<HTMLDivElement, ${name}Props>(function ({ children, onClick }, ref) {
   return (
-    <div onClick={onClick}>
+    <div onClick={onClick} ref={ref}>
       {children}
     </div>
   );
-};
+});
 
 export default ${name};
 `;
 }
 
-function storiesTemplate(name: string) {
-  return `import { action } from '@storybook/addon-actions';
-import { text } from '@storybook/addon-knobs';
-import React from 'react';
-import ${name} from './${name}';
+// function storiesTemplate(name: string) {
+//   return `import { action } from '@storybook/addon-actions';
+// import { text } from '@storybook/addon-knobs';
+// import React from 'react';
+// import ${name} from './${name}';
 
-export default {
-  title: '${name}',
-  excludeStories: ['actions']
-};
+// export default {
+//   title: '${name}',
+//   excludeStories: ['actions']
+// };
 
-export const actions = {
-  onClick: action('onClick')
-};
+// export const actions = {
+//   onClick: action('onClick')
+// };
 
-export const simple = () => <${name} {...actions}>{text('text', 'I am a ${name}')}</${name}>;
-`;
-}
+// export const simple = () => <${name} {...actions}>{text('text', 'I am a ${name}')}</${name}>;
+// `;
+// }
 
 function storiesWithDocTemplate(name: string) {
   return `import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
-import { text, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
-import { useState } from 'react';
 import ${name} from './${name}';
 
 <Meta title='${name} ' component={${name}} />
@@ -60,28 +58,18 @@ With MDX we can define a story for ${name} right in the middle of our
 markdown documentation.
 
 
-
 ## Default 
 <Preview>
   <Story name='Simple'>
     {
       ()=>{
-  const [activeAcc, setActiveAcc] = useState('');
     return(
-      <${name}  onClick={action('onClick')}>{text('text', 'I am a ${name}')}</${name}>
+      <${name}  onClick={action('onClick')}>${name}</${name}>
         )
       }
     }
   </Story>
 </Preview>
-
-## With Knobs 
-<Preview>
-<Story name='Knobs'>
-      <${name} onClick={action('onClick')} >{text('text', 'I am a ${name}')}</${name}>
-</Story>
-</Preview>
-
 
 
 ## Props

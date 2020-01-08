@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { FC, HTMLAttributes, ReactNode } from 'react';
+import React, { forwardRef, HTMLAttributes, ReactNode } from 'react';
 import Icon from '../Icon';
 
 export type ButtonVariant =
@@ -33,14 +33,14 @@ export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   icon?: string;
 }
 
-export const Button: FC<ButtonProps> = function ({
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function ({
   variant = 'default',
   size = 'md',
   className = '',
   icon = 'done',
   children,
   ...props
-}) {
+}, ref) {
   return (
     <button
       className={clsx(
@@ -50,13 +50,14 @@ export const Button: FC<ButtonProps> = function ({
         { [`btn-${size}`]: size },
         { 'btn-icon': icon }
       )}
+      ref={ref}
       {...props}
     >
       {children}
       {icon && <Icon>{icon}</Icon>}
     </button >
   );
-};
+});
 
 
 export default Button;
