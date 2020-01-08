@@ -15,9 +15,9 @@ export interface ${name}Props {
   onClick?: () => void;
 }
 
-const ${name} = forwardRef<HTMLDivElement, ${name}Props>(function ({ children, onClick }) {
+const ${name} = forwardRef<HTMLDivElement, ${name}Props>(function ({ children, onClick }, ref) {
   return (
-    <div onClick={onClick}>
+    <div onClick={onClick} ref={ref}>
       {children}
     </div>
   );
