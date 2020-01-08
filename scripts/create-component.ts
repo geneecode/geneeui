@@ -8,20 +8,20 @@ const LIB_SCSS_FILEPATH = resolve(SRC_DIR, 'styles', 'geneeui.scss');
 const { mkdir, writeFile, readFile } = fs.promises;
 
 function componentTemplate(name: string) {
-  return `import React, { FC, ReactNode } from 'react';
+  return `import React, { forwardRef, ReactNode } from 'react';
 
 export interface ${name}Props {
   children?: ReactNode;
   onClick?: () => void;
 }
 
-const ${name}: FC<${name}Props> = function ({ children, onClick }) {
+const ${name} = forwardRef<HTMLDivElement, ${name}Props>(function ({ children, onClick }) {
   return (
     <div onClick={onClick}>
       {children}
     </div>
   );
-};
+});
 
 export default ${name};
 `;
