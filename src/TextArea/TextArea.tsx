@@ -1,5 +1,5 @@
-import React, { FC, TextareaHTMLAttributes } from 'react';
 import clsx from 'clsx';
+import React, { forwardRef, TextareaHTMLAttributes } from 'react';
 import Icon from '../Icon';
 
 export interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
@@ -9,11 +9,12 @@ export interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElemen
   label?: string;
 }
 
-const TextArea: FC<TextAreaProps> = function ({ label, className, error, errormessage, ...props }) {
+const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(function ({ label, className, error, errormessage, ...props }, ref) {
   return (
     <>
       <label>{label}</label>
       <textarea
+        ref={ref}
         className={clsx(error ? "form-input error-input" : "form-input", className)}
         {...props} />
       {error ?
@@ -25,6 +26,6 @@ const TextArea: FC<TextAreaProps> = function ({ label, className, error, errorme
     </>
 
   );
-};
+});
 
 export default TextArea;

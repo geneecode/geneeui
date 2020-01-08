@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, ReactNode, forwardRef } from 'react';
 import clsx from 'clsx';
 
 export interface TagProps {
@@ -8,12 +8,12 @@ export interface TagProps {
   onClick?: () => void;
 }
 
-const Tag: FC<TagProps> = function ({ className, darkMode = false, children, onClick }) {
+const Tag = forwardRef<HTMLDivElement, TagProps>(function ({ className, darkMode = false, children, onClick }, ref) {
   return (
-    <div className={clsx(className, 'tag-item')} onClick={onClick}>
+    <div className={clsx(className, 'tag-item')} onClick={onClick} ref={ref}>
       {children}
     </div>
   );
-};
+});
 
 export default Tag;

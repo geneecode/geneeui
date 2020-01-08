@@ -1,17 +1,18 @@
-import React, { HTMLAttributes, FC } from 'react';
 import clsx from 'clsx';
+import React, { forwardRef, HTMLAttributes } from 'react';
 
 export interface RowProps extends HTMLAttributes<HTMLElement> { };
 
-export const Row: FC<RowProps> = function ({ children, className, ...props }) {
+export const Row = forwardRef<HTMLDivElement, RowProps>(function ({ children, className, ...props }, ref) {
   return (
     <section
       {...props}
+      ref={ref}
       className={clsx('row', className)}
     >
       {children}
     </section>
   );
-};
+});
 
 export default Row;
