@@ -1,4 +1,4 @@
-import React, { FC, forwardRef, useRef } from 'react';
+import React, { forwardRef, useRef } from 'react';
 import { AgGridReact, AgGridReactProps } from 'ag-grid-react';
 import clsx from 'clsx';
 
@@ -8,10 +8,10 @@ export interface TableProps extends AgGridReactProps {
   suppressHorizontalScroll?: boolean;
 }
 
-const Table = forwardRef<AgGridReact ,TableProps> (function (
+const Table = forwardRef<AgGridReact, TableProps>(function (
   { wrapperclassName, suppressHorizontalScroll = true, ...props }, ref) {
 
-   const gridRef = useRef(null);
+  const gridRef = useRef(null);
 
   const onGridSizeChanged = (params) => {
     let gridWidth = gridRef.current.offsetWidth;

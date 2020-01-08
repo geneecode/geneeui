@@ -27,24 +27,24 @@ export default ${name};
 `;
 }
 
-function storiesTemplate(name: string) {
-  return `import { action } from '@storybook/addon-actions';
-import { text } from '@storybook/addon-knobs';
-import React from 'react';
-import ${name} from './${name}';
+// function storiesTemplate(name: string) {
+//   return `import { action } from '@storybook/addon-actions';
+// import { text } from '@storybook/addon-knobs';
+// import React from 'react';
+// import ${name} from './${name}';
 
-export default {
-  title: '${name}',
-  excludeStories: ['actions']
-};
+// export default {
+//   title: '${name}',
+//   excludeStories: ['actions']
+// };
 
-export const actions = {
-  onClick: action('onClick')
-};
+// export const actions = {
+//   onClick: action('onClick')
+// };
 
-export const simple = () => <${name} {...actions}>{text('text', 'I am a ${name}')}</${name}>;
-`;
-}
+// export const simple = () => <${name} {...actions}>{text('text', 'I am a ${name}')}</${name}>;
+// `;
+// }
 
 function storiesWithDocTemplate(name: string) {
   return `import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';

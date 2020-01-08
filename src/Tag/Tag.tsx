@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, forwardRef } from 'react';
+import React, { ReactNode, forwardRef } from 'react';
 import clsx from 'clsx';
 
 export interface TagProps {
