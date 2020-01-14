@@ -8,7 +8,7 @@ export interface TableProps extends AgGridReactProps {
   suppressHorizontalScroll?: boolean;
 }
 
-const Table = forwardRef<AgGridReact, TableProps>(function (
+export const Table = forwardRef<AgGridReact, TableProps>(function (
   { wrapperclassName, suppressHorizontalScroll = true, ...props }, ref) {
 
   const gridRef = useRef(null);

@@ -10,7 +10,7 @@ export interface SelectProps extends ComponentProps<typeof ReactSelect> {
   error?: boolean;
 }
 
-const Select: FC<SelectProps> = function ({
+export const Select: FC<SelectProps> = function ({
   label,
   error,
   className,

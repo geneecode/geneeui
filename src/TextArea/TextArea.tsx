@@ -9,7 +9,7 @@ export interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElemen
   label?: string;
 }
 
-const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(function ({ label, className, error, errormessage, ...props }, ref) {
+export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(function ({ label, className, error, errormessage, ...props }, ref) {
   return (
     <>
       <label>{label}</label>

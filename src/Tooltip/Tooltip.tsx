@@ -6,9 +6,9 @@ export interface TooltipProps {
   tip?: string;
 }
 
-const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(function ({ children, className, tip }, ref) {
+export const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(function ({ children, className, tip }, ref) {
   return (
-    <div className={`tooltip ${className}`}>
+    <div className={`tooltip ${className}`} ref={ref}>
       <abbr >
         {children}
       </abbr>

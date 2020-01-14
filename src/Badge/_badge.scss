@@ -1,0 +1,55 @@
+.badge {
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    @include font-size(10);
+    font-weight: map-get($font-weight, semibold);
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+
+    &.badge-dot {
+        width: 9px;
+        height: 9px;
+        top: -8px;
+        left: -4px;
+    }
+
+    &.badge-default {
+        color: map-get($colors, secondary);
+        background-color: map-get($colors, tertiary);
+    }
+
+    &.badge-primary {
+        color: map-get($colors, white);
+        background-color: map-get($colors, primary);
+    }
+
+    &.badge-secondary {
+        color: map-get($colors, white);
+        background-color: map-get($colors, secondary);
+    }
+
+    &.badge-info {
+        color: map-get($colors, white);
+        background-color: map-get($colors, info);
+    }
+
+    &.badge-success {
+        color: map-get($colors, white);
+        background-color: map-get($colors, success);
+    }
+
+    &.badge-warning {
+        color: map-get($colors, white);
+        background-color: map-get($colors, warning);
+    }
+
+    &.badge-danger {
+        color: map-get($colors, white);
+        background-color: map-get($colors, danger);
+    }
+}

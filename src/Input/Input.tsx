@@ -14,7 +14,7 @@ export interface InputProps
   type?: 'text' | 'email' | 'password' | 'number' | 'search';
 }
 
-const Input = forwardRef<HTMLInputElement, InputProps>(function ({
+export const Input = forwardRef<HTMLInputElement, InputProps>(function ({
   type = 'text',
   className,
   errormessage,

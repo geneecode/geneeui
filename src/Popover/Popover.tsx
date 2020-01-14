@@ -7,7 +7,7 @@ export interface PopoverProps extends ReactPopOverProps {
 
 }
 
-const Popover: FC<PopoverProps> = function ({ content, ...props }) {
+export const Popover: FC<PopoverProps> = function ({ content, ...props }) {
   return (
     <div className="popover">
       <MyPopOver {...props}

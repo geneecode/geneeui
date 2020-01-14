@@ -13,3 +13,4 @@ export { PopoverProps, default as Popover } from './Popover';
 export { FileUploaderProps, default as FileUploader } from './FileUploader';
 export { ColorPickerProps, default as ColorPicker } from './ColorPicker';
 export { ModalProps, default as Modal } from './Modal';
+export { BadgeProps, default as Badge } from './Badge';

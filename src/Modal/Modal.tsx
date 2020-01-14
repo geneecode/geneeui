@@ -14,7 +14,7 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   size?: ModalSize;
 }
 
-const Modal = forwardRef<HTMLDivElement, ModalProps>(function ({ open, children, size, className, ...props }, ref) {
+export const Modal = forwardRef<HTMLDivElement, ModalProps>(function ({ open, children, size, className, ...props }, ref) {
   if (!open || !canUseDOM()) return null;
 
   return createPortal(
