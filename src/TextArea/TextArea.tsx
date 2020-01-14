@@ -9,22 +9,21 @@ export interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElemen
   label?: string;
 }
 
-const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(function ({ label, className, error, errormessage, ...props }, ref) {
+export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(function(
+  { label, className, error, errormessage, ...props },
+  ref,
+) {
   return (
     <>
       <label>{label}</label>
-      <textarea
-        ref={ref}
-        className={clsx(error ? "form-input error-input" : "form-input", className)}
-        {...props} />
-      {error ?
+      <textarea ref={ref} className={clsx(error ? 'form-input error-input' : 'form-input', className)} {...props} />
+      {error ? (
         <div className="error-message">
           <Icon>error</Icon>
           <span>{errormessage}</span>
         </div>
-        : null}
+      ) : null}
     </>
-
   );
 });
 

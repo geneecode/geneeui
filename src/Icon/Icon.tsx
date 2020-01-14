@@ -8,22 +8,9 @@ export interface IconProps {
   onClick?: () => void;
 }
 
-export const Icon = forwardRef<HTMLDivElement, IconProps>(function ({
-  title,
-  className,
-  children,
-  onClick
-}, ref) {
+export const Icon = forwardRef<HTMLDivElement, IconProps>(function({ title, className, children, onClick }, ref) {
   return (
-    <i
-      title={title}
-      onClick={onClick}
-      className={clsx(
-        'material-icons',
-        className
-      )}
-      ref={ref}
-    >
+    <i title={title} onClick={onClick} className={clsx('material-icons', className)} ref={ref}>
       {children}
     </i>
   );

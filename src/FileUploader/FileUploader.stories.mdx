@@ -1,0 +1,32 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import  { useCallback } from 'react';
+import FileUploader from './FileUploader';
+import {Button} from '..';
+
+
+<Meta title='Components|FileUploader' component={FileUploader} />
+
+# FileUploader
+With `MDX` we can define a story for `FileUploader` right in the middle of our
+markdown documentation.
+
+## Simple 
+<Preview>
+	<Story name='Simple'>
+  {
+    ()=>{
+      const onDrop = useCallback(acceptedFiles => {
+      console.log(acceptedFiles);
+      }, []);
+      return (
+        <FileUploader onDrop={onDrop} />
+      );
+    }
+  }
+  </Story>
+</Preview>
+
+
+## Props
+<Props of={FileUploader} />

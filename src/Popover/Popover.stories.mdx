@@ -1,0 +1,52 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { useState } from 'react';
+import { Input} from '..';
+import Popover from './Popover';
+import Button from '../Button';
+
+
+<Meta title='Components|Popover' component={Popover} />
+
+export const actions = {
+  onClick: action('onClick')
+};
+
+# Popover
+With `MDX` we can define a story for `Popover` right in the middle of our
+markdown documentation.
+
+## Simple 
+<Preview>
+	<Story name='Simple'>
+    {
+      ()=>{
+        const [isPopoverOpen, setisPopoverOpen] = useState(false);
+        return (
+          <Popover
+            isOpen={isPopoverOpen}
+            position={'bottom'}
+            onClickOutside={() => setisPopoverOpen(!isPopoverOpen)}
+            content={
+              <Input
+                {...actions}
+                type="email"
+                label="Enter Input Here"
+                placeholder="Please enter your Ticket No."
+              />
+            }
+          >
+            <Button className="m-3" variant="primary" onClick={() => setisPopoverOpen(!isPopoverOpen)}>
+              Open PopOver
+            </Button>
+          </Popover>
+        );
+      }
+    }
+  </Story>
+</Preview>
+
+
+
+## Props
+<Props of={Popover} />

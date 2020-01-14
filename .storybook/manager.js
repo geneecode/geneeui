@@ -1,6 +1,7 @@
+import { addons } from '@storybook/addons';
 import { create } from '@storybook/theming/create';
 
-export default create({
+const theme = create({
   base: 'light',
 
   colorPrimary: '#222945',
@@ -27,5 +28,10 @@ export default create({
 
   brandTitle: 'GeneeCode',
   brandUrl: 'https://geneecode.com/geneeui',
-  brandImage: require('./GeneeCodeLogoHorizontal.png'),
+  // brandImage: require('../public/assets/GeneeCodeLogoHorizontal.png'),
+});
+
+addons.setConfig({
+  panelPosition: 'bottom',
+  theme,
 });

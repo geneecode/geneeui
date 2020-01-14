@@ -1,0 +1,29 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import Tooltip from './Tooltip';
+
+
+<Meta title='Components|Tooltip' component={Tooltip} />
+
+export const actions = {
+  onClick: action('onClick')
+};
+
+# Tooltip
+With `MDX` we can define a story for `Tooltip` right in the middle of our
+markdown documentation.
+
+## Simple 
+<Preview>
+	<Story name='Simple'>
+    <Tooltip
+      tip="This is Genee Tooltip"
+    >
+      Hover Over me to see Genee Tooltip
+    </Tooltip>
+  </Story>
+</Preview>
+
+
+## Props
+<Props of={Tooltip} />

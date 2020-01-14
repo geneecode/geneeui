@@ -8,15 +8,13 @@ it('renders', () => {
   ReactDOM.render(
     <Select
       label="Frontend"
-      options={
-        [
-          { value: 'react', label: 'React' },
-          { value: 'vue', label: 'Vue' },
-          { value: 'angular', label: 'Angular' },
-        ]
-      }
+      options={[
+        { value: 'react', label: 'React' },
+        { value: 'vue', label: 'Vue' },
+        { value: 'angular', label: 'Angular' },
+      ]}
     />,
-    div
+    div,
   );
 
   const comp = div.querySelector('div');

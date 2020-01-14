@@ -1,0 +1,61 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import Icon from '../Icon';
+import Badge from './Badge';
+
+
+<Meta title='Components|Badge' component={Badge} />
+
+# Badge
+With `MDX` we can define a story for `Badge` right in the middle of our
+markdown documentation.
+
+## Simple 
+<Preview>
+  <Story name='Simple'>
+    <Badge
+    variant="default"
+    content={12}
+    >
+      <Icon>notifications</Icon>
+    </Badge>
+  </Story>
+</Preview>
+
+## With Number 
+<Preview>
+  <Story name='With Number'>
+    <Badge
+    variant="primary"
+    content={12}
+    >
+      <Icon>notifications</Icon>
+    </Badge>
+  </Story>
+</Preview>
+
+## With Max Number 
+<Preview>
+  <Story name='With Max Number'>
+      <Badge
+    variant="primary"
+    content={121}
+    max={100}
+  >
+    <Icon>notifications</Icon>
+  </Badge>
+  </Story>
+</Preview>
+
+## With Dot  
+<Preview>
+  <Story name='With Dot'>
+      <Badge variant="primary">
+    <Icon>notifications</Icon>
+  </Badge>
+  </Story>
+</Preview>
+
+
+
+## Props
+<Props of={Badge} />

@@ -1,0 +1,55 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { useState } from 'react';
+import { actions as buttonActions } from '../Button/Button.stories.mdx';
+import Button from '../Button/Button';
+import ModalBody from '../ModalBody';
+import ModalFooter from '../ModalFooter';
+import ModalHeader from '../ModalHeader';
+import Modal from './Modal';
+
+
+<Meta title='Components|Modal' component={Modal} />
+
+# Modal
+With `MDX` we can define a story for `Modal` right in the middle of our
+markdown documentation.
+
+## Simple 
+<Preview>
+	<Story name='Simple'>
+    {
+      ()=>{
+        const [open, setOpen] = useState(false);
+        return (
+          <>
+            <Button className="m-3" onClick={() => setOpen(true)} variant="primary">Open Modal</Button>
+            <Modal
+              size={'md'}
+              open={open}
+            >
+              <ModalHeader onClose={() => setOpen(false)} title={"Title Goes Here"} />
+              <ModalBody>
+                <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab cupiditate ex quas, aliquam nobis quo eligendi culpa dolorem molestiae. Mollitia similique a consequuntur accusamus vitae perferendis totam placeat. Itaque, eaque?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab cupiditate ex quas, aliquam nobis quo eligendi culpa dolorem molestiae.
+                Mollitia similique a consequuntur accusamus vitae perferendis totam placeat. Itaque, eaque.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab cupiditate ex quas, aliquam nobis quo eligendi culpa dolorem molestiae.
+                Mollitia similique a consequuntur accusamus vitae perferendis totam placeat. Itaque, eaque? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                b cupiditate ex quas, aliquam nobis quo eligendi culpa dolorem molestiae. Mollitia similique a consequuntur accusamus vitae perferendis totam placeat. Itaque, eaque.
+                </p>
+              </ModalBody>
+              <ModalFooter>
+                <Button {...buttonActions} onClick={() => setOpen(false)} size="sm" className="mr-2" >Close</Button>
+                <Button {...buttonActions} variant="primary" size="sm">Proceed</Button>
+              </ModalFooter>
+            </Modal>
+          </>
+        );
+      }
+    }
+  </Story>
+</Preview>
+
+
+## Props
+<Props of={Modal} />
