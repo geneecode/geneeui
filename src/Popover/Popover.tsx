@@ -4,13 +4,13 @@ import MyPopOver from 'react-tiny-popover';
 
 export interface PopoverProps extends ReactPopOverProps {
   content: JSX.Element;
-
 }
 
-export const Popover: FC<PopoverProps> = function ({ content, ...props }) {
+export const Popover: FC<PopoverProps> = function({ content, ...props }) {
   return (
     <div className="popover">
-      <MyPopOver {...props}
+      <MyPopOver
+        {...props}
         content={({ position, targetRect, popoverRect }) => (
           <ArrowContainer
             position={position}
@@ -19,12 +19,9 @@ export const Popover: FC<PopoverProps> = function ({ content, ...props }) {
             arrowColor={'#2A324C'}
             arrowSize={10}
           >
-            <div className="popover-content">
-              {content}
-            </div>
+            <div className="popover-content">{content}</div>
           </ArrowContainer>
         )}
-
       />
     </div>
   );

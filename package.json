@@ -1,6 +1,6 @@
 {
   "name": "@geneecode/geneeui",
-  "version": "0.0.16",
+  "version": "0.1.1",
   "description": "GeneeUI is a React based component library, providing everyday use components for building web applications",
   "main": "lib/index.js",
   "module": "lib/esm/index.js",
@@ -25,7 +25,7 @@
     "prepublishOnly": "npm run build",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.js\"",
     "lint": "eslint  --ext .tsx,.ts ."
   },
   "repository": {

@@ -7,14 +7,10 @@ import { Icon } from '..';
 it('renders', () => {
   const div = document.createElement('div');
   ReactDOM.render(
-    <Badge
-      variant="default"
-      content={12}
-    >
+    <Badge variant="default" content={12}>
       <Icon>notifications</Icon>
-    </Badge>
-    ,
-    div
+    </Badge>,
+    div,
   );
 
   const comp = div.querySelector('div');

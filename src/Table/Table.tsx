@@ -2,18 +2,18 @@ import React, { forwardRef, useRef } from 'react';
 import { AgGridReact, AgGridReactProps } from 'ag-grid-react';
 import clsx from 'clsx';
 
-
 export interface TableProps extends AgGridReactProps {
   wrapperclassName?: string;
   suppressHorizontalScroll?: boolean;
 }
 
-export const Table = forwardRef<AgGridReact, TableProps>(function (
-  { wrapperclassName, suppressHorizontalScroll = true, ...props }, ref) {
-
+export const Table = forwardRef<AgGridReact, TableProps>(function(
+  { wrapperclassName, suppressHorizontalScroll = true, ...props },
+  ref,
+) {
   const gridRef = useRef(null);
 
-  const onGridSizeChanged = (params) => {
+  const onGridSizeChanged = params => {
     let gridWidth = gridRef.current.offsetWidth;
     let columnsToShow = [];
     let columnsToHide = [];
@@ -34,18 +34,18 @@ export const Table = forwardRef<AgGridReact, TableProps>(function (
   };
 
   return (
-    <div style={{ width: "100%", height: "100%" }} >
-      <div ref={gridRef} style={{ width: "100%", height: "100%" }}>
+    <div style={{ width: '100%', height: '100%' }}>
+      <div ref={gridRef} style={{ width: '100%', height: '100%' }}>
         <div
           id="myGrid"
           style={{
-            height: "100%",
-            width: "100%"
+            height: '100%',
+            width: '100%',
           }}
-          className={clsx("ag-theme-material", wrapperclassName)}
+          className={clsx('ag-theme-material', wrapperclassName)}
         >
           <AgGridReact
-            domLayout='autoHeight'
+            domLayout="autoHeight"
             ref={ref}
             {...props}
             suppressHorizontalScroll={suppressHorizontalScroll}
@@ -53,7 +53,7 @@ export const Table = forwardRef<AgGridReact, TableProps>(function (
           />
         </div>
       </div>
-    </div >
+    </div>
   );
 });
 

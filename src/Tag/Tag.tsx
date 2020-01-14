@@ -8,7 +8,10 @@ export interface TagProps {
   onClick?: () => void;
 }
 
-export const Tag = forwardRef<HTMLDivElement, TagProps>(function ({ className, darkMode = false, children, onClick }, ref) {
+export const Tag = forwardRef<HTMLDivElement, TagProps>(function(
+  { className, darkMode = false, children, onClick },
+  ref,
+) {
   return (
     <div className={clsx(className, 'tag-item')} onClick={onClick} ref={ref}>
       {children}

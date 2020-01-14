@@ -1,6 +1,6 @@
 let modalRootSelector = () => document.body;
 
-export const setModalRootSelector = (selector: () => HTMLElement) =>{
+export const setModalRootSelector = (selector: () => HTMLElement) => {
   modalRootSelector = selector;
 };
 

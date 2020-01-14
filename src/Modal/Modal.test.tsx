@@ -9,27 +9,31 @@ import Modal from './Modal';
 it('renders', () => {
   const div = document.createElement('div');
   ReactDOM.render(
-    <Modal
-      size={'md'}
-      open={true}
-    >
-      <ModalHeader onClose={() => console.log("closed")} title={"Title Goes Here"} />
+    <Modal size={'md'} open={true}>
+      <ModalHeader onClose={() => console.log('closed')} title={'Title Goes Here'} />
       <ModalBody>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab cupiditate ex quas, aliquam nobis quo eligendi culpa dolorem molestiae. Mollitia similique a consequuntur accusamus vitae perferendis totam placeat. Itaque, eaque?
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab cupiditate ex quas, aliquam nobis quo eligendi culpa dolorem molestiae.
-          Mollitia similique a consequuntur accusamus vitae perferendis totam placeat. Itaque, eaque.
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab cupiditate ex quas, aliquam nobis quo eligendi culpa dolorem molestiae.
-          Mollitia similique a consequuntur accusamus vitae perferendis totam placeat. Itaque, eaque? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          b cupiditate ex quas, aliquam nobis quo eligendi culpa dolorem molestiae. Mollitia similique a consequuntur accusamus vitae perferendis totam placeat. Itaque, eaque.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab cupiditate ex quas, aliquam nobis quo eligendi
+          culpa dolorem molestiae. Mollitia similique a consequuntur accusamus vitae perferendis totam placeat. Itaque,
+          eaque? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab cupiditate ex quas, aliquam nobis quo
+          eligendi culpa dolorem molestiae. Mollitia similique a consequuntur accusamus vitae perferendis totam placeat.
+          Itaque, eaque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab cupiditate ex quas, aliquam nobis
+          quo eligendi culpa dolorem molestiae. Mollitia similique a consequuntur accusamus vitae perferendis totam
+          placeat. Itaque, eaque? Lorem ipsum dolor sit amet consectetur, adipisicing elit. b cupiditate ex quas,
+          aliquam nobis quo eligendi culpa dolorem molestiae. Mollitia similique a consequuntur accusamus vitae
+          perferendis totam placeat. Itaque, eaque.
         </p>
       </ModalBody>
       <ModalFooter>
-        <Button size="sm" className="mr-2" >Close</Button>
-        <Button variant="primary" size="sm">Proceed</Button>
+        <Button size="sm" className="mr-2">
+          Close
+        </Button>
+        <Button variant="primary" size="sm">
+          Proceed
+        </Button>
       </ModalFooter>
     </Modal>,
-    div
+    div,
   );
 
   const comp = div.querySelector('div');
