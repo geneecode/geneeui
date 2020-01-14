@@ -1,7 +1,5 @@
 @import "../../node_modules/ag-grid-community/src/styles/ag-grid.scss";
 @import "../../node_modules/ag-grid-community/src/styles/ag-theme-material/sass/ag-theme-material.scss";
-@import "../../node_modules/material-design-icons/iconfont/material-icons.css";
-
 @import "base/variables";
 @import "base/mixins";
 @import "base/utility";
@@ -20,9 +18,9 @@
 @import "../Select/select";
 @import "../Table/table";
 @import "../Tag/tag";
-@import '../Tooltip/tooltip';
-@import '../Popover/popover';
-@import '../FileUploader/file-uploader';
-@import '../ColorPicker/color-picker';
-@import '../Modal/modal';
-@import '../Badge/badge';
+@import "../Tooltip/tooltip";
+@import "../Popover/popover";
+@import "../FileUploader/file-uploader";
+@import "../ColorPicker/color-picker";
+@import "../Modal/modal";
+@import "../Badge/badge";
