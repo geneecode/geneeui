@@ -1,0 +1,61 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import {useState} from 'react';
+import ColorPicker from './ColorPicker';
+import Button from '../Button';
+
+<Meta title='Components|ColorPicker' component={ColorPicker} />
+
+# ColorPicker
+With `MDX` we can define a story for `ColorPicker` right in the middle of our
+markdown documentation.
+
+## Simple 
+<Preview>
+	<Story name='Simple'>
+    {
+    ()=>{
+      const [color, setColor] = useState("#fff");
+      return (
+        <>
+          <ColorPicker
+            color={color}
+            onChange={(e) => setColor(e.hex)}
+            disableAlpha={true}
+          />
+            <h2>My Color Value is : {color}</h2>
+            <p>Replace event.hex with anyother format you want to get. (i.e. e.rgb)</p>
+          </>
+      );
+      }
+  }
+  </Story>
+</Preview>
+
+## OnToggle
+<Preview>
+	<Story name='OnToggle'>
+    {
+    ()=>{
+      const [open, setOpen] = useState(false);
+      const [color, setColor] = useState("#fff");
+      return (
+     <>
+       { open &&
+          <ColorPicker
+            color={color}
+            onChange={(e) => setColor(e.hex)}
+            disableAlpha={true}
+          />}
+          <Button onClick={()=>setOpen(!open)}>Click Me To Optn Color Picker</Button>
+     </>
+      );
+      }
+  }
+  </Story>
+</Preview>
+
+
+
+## Props
+<Props of={ColorPicker} />

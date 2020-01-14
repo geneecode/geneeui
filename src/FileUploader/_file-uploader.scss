@@ -1,0 +1,13 @@
+.file-upload {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    color: map-get($colors, light-blue);
+    border: 1px solid map-get($colors, light-blue);
+    border-radius: 5px;
+    outline: none;
+    font-family: $secondary-font;
+    @include font-size(11);
+    box-sizing: border-box;
+    cursor: pointer;
+}

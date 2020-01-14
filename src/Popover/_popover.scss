@@ -1,0 +1,11 @@
+.react-tiny-popover-container {
+    box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.3);
+    .popover-content {
+        position: relative;
+        background-color: #2e2158;
+        color: map-get($colors, white);
+        padding: 20px;
+        width: 270px;
+        z-index: 999999;
+    }
+}

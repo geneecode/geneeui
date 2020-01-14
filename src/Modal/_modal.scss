@@ -1,0 +1,112 @@
+/*Modal Style*/
+.modal {
+    background: change-color(#000000, $alpha: 0.7);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+    font-family: sans-serif;
+    box-shadow: 0 0.6rem 4rem rgba(0, 0, 0, 0.08);
+    padding: 0px 20px;
+
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        background-color: #2E2158;
+        border: 1px solid map-get($colors, border-color);
+        border-radius: 5px;
+        outline: 0;
+        margin: 0px auto;
+        margin-top: 100px;
+
+        .modal-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 1px solid map-get($colors, border-color);
+
+            .modal-title {
+                @include font-size(16);
+                margin: 0px !important;
+                font-family: $primary-font;
+                font-weight: 300;
+                text-transform: uppercase;
+                padding: 6px 0px;
+            }
+
+            .close-icon {
+                .material-icons {
+                    @include font-size(14);
+                }
+            }
+        }
+
+        .modal-body {
+            position: relative;
+            flex: 1 1 auto;
+            padding: 15px;
+            @include font-size(13);
+
+            p {
+                margin: 0px;
+                font-family: $secondary-font;
+                font-weight: 300;
+                @include font-size(13);
+            }
+        }
+
+        .modal-footer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 15px;
+            border-top: 1px solid map-get($colors, border-color);
+        }
+
+        &.modal-sm {
+            max-width: 500px;
+            .modal-body {
+                max-height: 400px;
+                overflow: auto;
+            }
+        }
+
+        &.modal-md {
+            max-width: 700px;
+            .modal-body {
+                max-height: 600px;
+                overflow: auto;
+            }
+        }
+
+        &.modal-lg {
+            max-width: 900px;
+            .modal-body {
+                max-height: 800px;
+                overflow: auto;
+            }
+        }
+    }
+
+    &.show {
+        display: block;
+    }
+}
+
+/*Class on body when modal-open*/
+.modal-open {
+    overflow: hidden;
+
+    .modal {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}

@@ -8,3 +8,8 @@ export { default as TextArea, TextAreaProps } from './TextArea';
 export { default as Select, SelectProps } from './Select';
 export { default as Table, TableProps } from './Table';
 export { TagProps, default as Tag } from './Tag';
+export { TooltipProps, default as Tooltip } from './Tooltip';
+export { PopoverProps, default as Popover } from './Popover';
+export { FileUploaderProps, default as FileUploader } from './FileUploader';
+export { ColorPickerProps, default as ColorPicker } from './ColorPicker';
+export { ModalProps, default as Modal } from './Modal';
