@@ -1,0 +1,315 @@
+.rdt {
+    position: relative !important;
+}
+
+.rdtPicker {
+    display: none !important;
+    position: absolute !important;
+    width: 250px !important;
+    padding: 4px !important;
+    margin-top: 1px !important;
+    z-index: 99999 !important;
+    background: transparent !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid #f9f9f9 !important;
+}
+
+.rdtOpen .rdtPicker {
+    display: block !important;
+}
+
+.rdtStatic .rdtPicker {
+    box-shadow: none !important;
+    position: static !important;
+}
+
+.rdtDay.in-selecting-range {
+    background-color: #68222f !important;
+}
+
+.rdtPicker {
+    .rdtTimeToggle {
+        text-align: center !important;
+    }
+
+    table {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    td,
+    th {
+        text-align: center !important;
+        height: 28px !important;
+    }
+
+    td {
+        cursor: pointer !important;
+
+        &.rdtDay:hover,
+        &.rdtHour:hover,
+        &.rdtMinute:hover,
+        &.rdtSecond:hover {
+            background: map-get($colors, slate-grey) !important;
+            cursor: pointer !important;
+        }
+    }
+
+    .rdtTimeToggle:hover {
+        background: map-get($colors, slate-grey) !important;
+        cursor: pointer !important;
+    }
+
+    td {
+        &.rdtOld,
+        &.rdtNew {
+            color: #999999 !important;
+        }
+
+        &.rdtToday {
+            position: relative !important;
+
+            &:before {
+                content: "" !important;
+                display: inline-block !important;
+                border-left: 7px solid transparent !important;
+                border-bottom: 7px solid map-get($colors, slate-grey) !important;
+                border-top-color: rgba(0, 0, 0, 0.2) !important;
+                position: absolute !important;
+                bottom: 4px !important;
+                right: 4px !important;
+            }
+        }
+
+        &.rdtActive {
+            background-color: map-get($colors, primary) !important;
+            color: #fff !important;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !important;
+
+            &:hover {
+                background-color: map-get($colors, primary) !important;
+                color: #fff !important;
+                text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !important;
+            }
+
+            &.rdtToday:before {
+                border-bottom-color: #fff !important;
+            }
+        }
+
+        &.rdtDisabled {
+            background: none !important;
+            color: #999999 !important;
+            cursor: not-allowed !important;
+
+            &:hover {
+                background: none !important;
+                color: #999999 !important;
+                cursor: not-allowed !important;
+            }
+        }
+
+        span {
+            &.rdtOld {
+                color: #999999 !important;
+            }
+
+            &.rdtDisabled {
+                background: none !important;
+                color: #999999 !important;
+                cursor: not-allowed !important;
+
+                &:hover {
+                    background: none !important;
+                    color: #999999 !important;
+                    cursor: not-allowed !important;
+                }
+            }
+        }
+    }
+
+    th {
+        border-bottom: 1px solid #f9f9f9 !important;
+    }
+
+    .dow {
+        width: 14.2857% !important;
+        border-bottom: none !important;
+        cursor: default !important;
+    }
+
+    th {
+        &.rdtSwitch {
+            width: 100px !important;
+        }
+
+        &.rdtNext,
+        &.rdtPrev {
+            font-size: 21px !important;
+            vertical-align: top !important;
+        }
+    }
+}
+
+.rdtPrev span,
+.rdtNext span {
+    display: block !important;
+    -webkit-touch-callout: none !important;
+
+    /* iOS Safari */
+    -webkit-user-select: none !important;
+
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none !important;
+
+    /* Konqueror */
+    -moz-user-select: none !important;
+
+    /* Firefox */
+    -ms-user-select: none !important;
+
+    /* Internet Explorer/Edge */
+    user-select: none !important;
+}
+
+.rdtPicker {
+    th.rdtDisabled {
+        background: none !important;
+        color: #999999 !important;
+        cursor: not-allowed !important;
+
+        &:hover {
+            background: none !important;
+            color: #999999 !important;
+            cursor: not-allowed !important;
+        }
+    }
+
+    thead tr:first-child th {
+        cursor: pointer !important;
+
+        &:hover {
+            background: map-get($colors, slate-grey) !important;
+        }
+    }
+
+    tfoot {
+        border-top: 1px solid #f9f9f9 !important;
+    }
+
+    button {
+        border: none !important;
+        background: none !important;
+        cursor: pointer !important;
+
+        &:hover {
+            background-color: #eee !important;
+        }
+    }
+
+    thead button {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+td {
+    &.rdtMonth,
+    &.rdtYear {
+        height: 50px !important;
+        width: 25% !important;
+        cursor: pointer !important;
+    }
+
+    &.rdtMonth:hover,
+    &.rdtYear:hover {
+        background: #eee !important;
+    }
+}
+
+.rdtCounters {
+    display: inline-block !important;
+
+    > div {
+        float: left !important;
+    }
+}
+
+.rdtCounter {
+    height: 100px !important;
+    width: 40px !important;
+}
+
+.rdtCounterSeparator {
+    line-height: 100px !important;
+}
+
+.rdtCounter {
+    .rdtBtn {
+        height: 40% !important;
+        line-height: 40px !important;
+        cursor: pointer !important;
+        display: block !important;
+        -webkit-touch-callout: none !important;
+
+        /* iOS Safari */
+        -webkit-user-select: none !important;
+
+        /* Chrome/Safari/Opera */
+        -khtml-user-select: none !important;
+
+        /* Konqueror */
+        -moz-user-select: none !important;
+
+        /* Firefox */
+        -ms-user-select: none !important;
+
+        /* Internet Explorer/Edge */
+        user-select: none !important;
+
+        &:hover {
+            background: #eee !important;
+        }
+    }
+
+    .rdtCount {
+        height: 20% !important;
+        font-size: 1.2em !important;
+    }
+}
+
+.rdtMilli {
+    vertical-align: middle !important;
+    padding-left: 8px !important;
+    width: 48px !important;
+
+    input {
+        width: 100% !important;
+        font-size: 1.2em !important;
+        margin-top: 37px !important;
+    }
+}
+
+.rdtTime td {
+    cursor: default !important;
+}
+
+.form-control {
+    padding: 9px;
+    background-color: transparent !important;
+    color: map-get($colors, light-blue) !important;
+    border: 1px solid map-get($colors, light-blue) !important;
+    border-radius: 5px !important;
+    outline: none !important;
+    font-family: $secondary-font !important;
+    @include font-size(11);
+    margin-bottom: 10px !important;
+    box-sizing: border-box !important;
+
+    &:focus,
+    &:active {
+        border: 1px solid map-get($colors, white) !important;
+        color: map-get($colors, white) !important;
+        outline: none !important;
+    }
+}

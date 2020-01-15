@@ -8,7 +8,7 @@ export interface FileUploaderProps extends DropzoneProps {
   className?: string;
 }
 
-export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(function(
+export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(function (
   { onDrop, uploadContent, dragActiveContent, className },
   ref,
 ) {
@@ -23,8 +23,8 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(functi
             ? dragActiveContent
             : 'Drop the files here ...'
           : uploadContent
-          ? uploadContent
-          : "Drag 'n' drop some files here, or click to select files"}
+            ? uploadContent
+            : "Drag 'n' drop some files here, or click to select files"}
       </div>
     </div>
   );

@@ -16,3 +16,4 @@ export { ModalProps, default as Modal } from './Modal';
 export { BadgeProps, default as Badge } from './Badge';
 export { CheckboxProps, default as Checkbox } from './Checkbox';
 export { RadioButtonProps, default as RadioButton } from './RadioButton';
+export { DateTimePickerProps, default as DateTimePicker } from './DateTimePicker';
