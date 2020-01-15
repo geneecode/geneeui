@@ -15,7 +15,7 @@ export interface ${name}Props {
   onClick?: () => void;
 }
 
-const ${name} = forwardRef<HTMLDivElement, ${name}Props>(function ({ children, onClick }, ref) {
+export const ${name} = forwardRef<HTMLDivElement, ${name}Props>(function ({ children, onClick }, ref) {
   return (
     <div onClick={onClick} ref={ref}>
       {children}
@@ -51,7 +51,7 @@ function storiesWithDocTemplate(name: string) {
 import { action } from '@storybook/addon-actions';
 import ${name} from './${name}';
 
-<Meta title='${name} ' component={${name}} />
+<Meta title='Components | ${name} ' component={${name}} />
 
 # ${name}
 With MDX we can define a story for ${name} right in the middle of our

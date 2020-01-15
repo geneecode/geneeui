@@ -1,0 +1,65 @@
+.checkbox {
+  position: relative;
+  display: inline;
+
+  input[type='checkbox'] {
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  label {
+    display: inline;
+    vertical-align: middle;
+    padding: 0px 0px 0px 10px;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      display: inline;
+    }
+
+    &:before {
+      height: 18px;
+      width: 18px;
+      border: 1px solid;
+      border-radius: 2px;
+      left: 0px;
+      top: 3px;
+      cursor: pointer;
+      pointer-events: none;
+    }
+
+    &:after {
+      height: 5px;
+      width: 9px;
+      border-left: 2px solid;
+      border-bottom: 2px solid;
+      transform: rotate(-45deg);
+      left: 5px;
+      top: 8px;
+      cursor: pointer;
+      pointer-events: none;
+    }
+  }
+
+  input[type='checkbox'] {
+    + label::after {
+      content: none;
+    }
+
+    &:checked + label:before {
+      background-color: map-get($colors, success);
+      animation: ripple 0.2s linear forwards;
+      border: 0px;
+      cursor: pointer;
+    }
+
+    &:checked + label:after {
+      content: '';
+      border-color: map-get($colors, white);
+      cursor: pointer;
+    }
+  }
+}

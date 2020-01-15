@@ -28,7 +28,6 @@ const theme = create({
 
   brandTitle: 'GeneeCode',
   brandUrl: 'https://geneecode.com/geneeui',
-  // brandImage: require('../public/assets/GeneeCodeLogoHorizontal.png'),
 });
 
 addons.setConfig({
