@@ -1,0 +1,68 @@
+.radio {
+  margin-bottom: 8px;
+
+  input[type='radio'] {
+    display: none;
+
+    &:checked + label:before {
+      border-color: map-get($colors, success);
+      animation: ripple 0.2s linear forwards;
+    }
+
+    &:checked + label:after {
+      transform: scale(1);
+    }
+  }
+
+  label {
+    display: inline-block;
+    height: 18px;
+    position: relative;
+    padding: 0px 0px 0px 30px;
+    margin-bottom: 0;
+    cursor: pointer;
+    vertical-align: bottom;
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      transition-property: transform, border-color;
+    }
+
+    &:before {
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      border: 2px solid map-get($colors, light-blue);
+    }
+
+    &:after {
+      top: 4px;
+      left: 4px;
+      width: 10px;
+      height: 10px;
+      transform: scale(0);
+      background: map-get($colors, success);
+    }
+  }
+
+  &.disabled {
+    pointer-events: none !important;
+    label:after {
+      background-color: map-get($colors, disable);
+    }
+    input[type='radio'] {
+      &:disabled + label {
+        color: map-get($colors, disable);
+      }
+
+      &:disabled + label:before {
+        border-color: map-get($colors, disable);
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import RadioButton from './RadioButton';
+import {useState} from "react";
+
+<Meta title='Components|RadioButton ' component={RadioButton} />
+
+# RadioButton
+With MDX we can define a story for RadioButton right in the middle of our
+markdown documentation.
+
+
+## Default 
+<Preview>
+	<Story name='Simple'>
+    {
+      ()=>{
+        const [selected, setSelected] = useState("React");
+        return (
+          <>
+            <RadioButton
+              label="React"
+              value="React"
+              checked={selected === "React"}
+              onClick={isChecked => setSelected(isChecked)}
+            />
+            <RadioButton
+              label="Angular"
+              value="Angular"
+              disabled={true}
+            />
+            <RadioButton
+              label="Vue"
+              value="Vue"
+              checked={selected === "Vue"}
+              onClick={isChecked => setSelected(isChecked)}
+            />
+          </>
+        );
+      }
+    }
+  </Story>
+</Preview>
+
+
+## Props
+<Props of={RadioButton} />
+

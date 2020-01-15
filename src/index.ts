@@ -14,3 +14,5 @@ export { FileUploaderProps, default as FileUploader } from './FileUploader';
 export { ColorPickerProps, default as ColorPicker } from './ColorPicker';
 export { ModalProps, default as Modal } from './Modal';
 export { BadgeProps, default as Badge } from './Badge';
+export { CheckboxProps, default as Checkbox } from './Checkbox';
+export { RadioButtonProps, default as RadioButton } from './RadioButton';
