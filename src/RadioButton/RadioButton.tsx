@@ -3,8 +3,8 @@ import clsx from 'clsx';
 
 export interface RadioButtonProps
   extends Pick<
-    InputHTMLAttributes<HTMLInputElement>,
-    'id' | 'checked' | 'defaultChecked' | 'value' | 'name' | 'className'
+  InputHTMLAttributes<HTMLInputElement>,
+  'id' | 'checked' | 'defaultChecked' | 'value' | 'name' | 'className'
   > {
   disabled?: boolean;
   value?: string;
@@ -12,7 +12,7 @@ export interface RadioButtonProps
   onClick?: (val: string) => void;
 }
 
-export const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(function(
+export const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(function (
   { disabled, value, label, onClick, ...props },
   ref,
 ) {
