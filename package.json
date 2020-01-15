@@ -118,7 +118,6 @@
     "ag-grid-react": "^22.1.1",
     "clsx": "^1.0.4",
     "core-js": "^3.6.1",
-    "material-design-icons": "^3.0.1",
     "react-color": "^2.18.0",
     "react-dropzone": "^10.2.1",
     "react-select": "^3.0.8",
