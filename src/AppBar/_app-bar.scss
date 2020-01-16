@@ -1,0 +1,232 @@
+.topbar {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 58px;
+    padding: 0px;
+    margin: 0px;
+    z-index: 9999;
+    box-sizing: border-box;
+    clear: both;
+}
+
+.topbar-dark {
+    background: #130a2e;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.topbar-light {
+    background: #f1f4ff;
+    box-shadow: 0px 4px 6px 0px rgba(255, 255, 255, 0.2);
+}
+
+.topbar-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.topbar-left {
+    display: block;
+    float: left;
+    clear: both;
+
+    &.withSideNav {
+        margin-left: 48px;
+    }
+}
+
+.topbar-logo {
+    display: block;
+    width: 120px;
+    height: 58px;
+    float: left;
+    position: relative;
+    margin: 0 20px;
+    padding: 0px;
+
+    > img {
+        max-width: 120px;
+        max-height: 58px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.topbar-nav {
+    display: inline-block;
+    float: left;
+
+    > ul {
+        width: auto;
+        display: block;
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    ul > li {
+        display: inline-block;
+        float: none;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+
+        > a {
+            display: block;
+            text-decoration: none;
+            line-height: 1;
+            padding: 20px 10px;
+            color: #b0bcda;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+.topbar-right {
+    display: block;
+    float: right;
+
+    .topbar-controls {
+        display: block;
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        white-space: nowrap;
+
+        > li {
+            display: inline-block;
+            float: none;
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+
+            > a {
+                display: block;
+                text-decoration: none;
+                line-height: 1;
+                padding: 16px 10px;
+                color: #b0bcda;
+            }
+        }
+    }
+
+    .topbar-user {
+        display: inline-block;
+        float: right;
+        padding: 12px 15px 13px 15px;
+    }
+}
+
+.topbar-user {
+    > .user-avatar {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        border-radius: 30px;
+        overflow: hidden;
+        margin-top: 2px;
+    }
+
+    .user-avatar > img {
+        max-width: 100%;
+        min-width: 100%;
+        max-height: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+}
+
+.profile-dropdown {
+    width: 224px;
+    background: map-get($colors, secondary);
+    border-radius: 5px;
+    box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.3);
+    padding: 24px 0 0 0;
+    text-align: center;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    right: 15px;
+    top: 48px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+
+    .user-image {
+        width: 74px;
+        height: 74px;
+        border-radius: 74px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        vertical-align: top;
+        display: inline-block;
+
+        img {
+            @extend %responsive-img;
+            object-fit: cover;
+        }
+    }
+
+    .user-info {
+        text-align: center;
+        display: block;
+
+        .name {
+            margin-top: 3px;
+            @include font-size(13);
+            color: #f0f3fb;
+            display: block;
+        }
+
+        .designation {
+            @include font-size(12);
+            color: #938fa1;
+            display: block;
+        }
+    }
+
+    ul {
+        margin-top: 24px;
+        padding-left: 0px;
+        list-style: none;
+
+        li {
+            border-top: 1px solid map-get($colors, border-color);
+
+            a {
+                min-height: 8px;
+                margin: 0;
+                padding: 12px 24px;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                @include font-size(12);
+
+                i {
+                    margin-right: 10px;
+                    @include font-size(14);
+                    position: relative;
+                }
+
+                &:hover {
+                    background: #3e465e;
+                    color: map-get($colors, white);
+                }
+            }
+        }
+    }
+
+    &.show {
+        display: block;
+    }
+}

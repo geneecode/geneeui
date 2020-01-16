@@ -1,0 +1,21 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import Link from './Link';
+
+
+<Meta title='Components|Link' component={Link} />
+
+# Link
+With `MDX` we can define a story for `Link` right in the middle of our
+markdown documentation.
+
+## Simple 
+<Preview>
+	<Story name='Simple'>
+    <div>
+      Hi I'm a Link. <Link to="#">Click me</Link> to Naigate.
+    </div>
+  </Story>
+</Preview>
+
+## Props
+<Props of={Link} />

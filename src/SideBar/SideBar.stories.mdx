@@ -1,0 +1,106 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { controls, links, logo, userAvatar } from '../AppBar/AppBar.stories.mdx';
+import { useCallback, useState } from 'react';
+import clsx from 'clsx';
+import AppBar from '../AppBar';
+import SideBarItem from '../SideBarItem/SideBarItem';
+import SideBarSection from '../SideBarSection';
+import Icon from '../Icon';
+import SideBar from './SideBar';
+
+
+
+<Meta title='Components|Layout/SideBar' component={SideBar} />
+
+# SideBar
+With `MDX` we can define a story for `SideBar` right in the middle of our
+markdown documentation.
+
+## Simple 
+<Preview>
+  <Story name='Simple'>
+    {
+      ()=>{
+        const [open, setOpen] = useState(false);
+        const toggleDrawer = useCallback(
+        () => setOpen(!open),
+        [open]
+        );
+    return(
+        <SideBar
+          onToggleDrawer={toggleDrawer}
+          open={open}
+        />
+        )
+      }
+    }
+  </Story>
+</Preview>
+
+
+## With AppBar 
+<Preview>
+  <Story name='With AppBar'>
+    {
+      ()=>{
+        const [open, setOpen] = useState(false);
+        const toggleDrawer = useCallback(
+        () => setOpen(!open),
+        [open]
+        );
+    return (
+      <>
+        <AppBar
+          logo={logo}
+          links={links}
+          controls={controls}
+          userAvatar={userAvatar}
+          sideNavActive={true}
+        />
+        <SideBar
+          onToggleDrawer={toggleDrawer}
+          open={open}
+        >
+        <SideBarSection
+          label="Employee"
+          actions={<Icon>add</Icon>}
+        >
+          <SideBarItem
+            onClick={() => console.log(123)}
+            icon="people"
+            label="Employee Group"
+            level={1}
+            actions={
+              <>
+                <a>
+                  <Icon>add</Icon>
+                </a>
+                <a>
+                  <Icon>edit</Icon>
+                </a>
+              </>
+            }
+          />
+          <SideBarItem
+            icon="people"
+            label="Employee Group"
+            level={1}
+          />
+        </SideBarSection>
+      </SideBar>
+        <main className={clsx({ pushContent: open })}>
+          <h1>Test Header</h1>
+        </main>
+    </>
+  );
+      }
+    }
+  </Story>
+</Preview>
+
+
+
+
+## Props
+<Props of={SideBar} />

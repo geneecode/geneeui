@@ -1,0 +1,83 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { useState } from 'react';
+import AppBar from './AppBar';
+import Link from '../Link';
+import Icon from '../Icon';
+
+<Meta title='Components|Layout/AppBar' component={AppBar} />
+
+# AppBar
+With `MDX` we can define a story for `AppBar` right in the middle of our
+markdown documentation.
+
+export const logoActions = {
+  onClick: action('Logo: onClick')
+};
+
+export const logo = (
+  <a className="topbar-logo" href="#"
+    {...logoActions}
+  >
+    <img src={require("../../public/assets/GeneeCodeLogoHorizontal.png")} alt="..." />
+  </a>
+); 
+
+export const linkActions = {
+  onClick: action('Link: onClick')
+};
+
+export const links = (
+  <ul>
+    <li>
+      <Link {...linkActions}>Link 1</Link>
+    </li>
+    <li>
+      <Link {...linkActions}>Link 2</Link>
+    </li>
+    <li>
+      <Link {...linkActions}>Link 3</Link>
+    </li>
+  </ul>
+);
+
+export const controlActions = {
+  onClick: action('Control: onClick')
+};
+
+export const controls = (
+  <ul className="topbar-controls">
+    <li><a {...controlActions}><Icon>search</Icon></a></li>
+    <li><a {...controlActions}><Icon>notifications</Icon></a></li>
+    <li><a {...controlActions}><Icon>apps</Icon></a></li>
+  </ul>
+);
+
+export const userAvatarActions = {
+  onClick: action('Control: onClick')
+};
+
+export const userAvatar = (
+  <div className="topbar-user">
+    <a href="#" className="user-avatar">
+      <img src={require("../../public/assets/avatar.png")} alt="#" />
+      </a>
+  </div>
+);
+
+## Simple 
+<Preview>
+  <Story name='Simple'>
+    <AppBar
+    logo={logo}
+    links={links}
+    controls={controls}
+    userAvatar={userAvatar}
+    />
+  </Story>
+</Preview>
+
+
+
+## Props
+<Props of={AppBar} />
