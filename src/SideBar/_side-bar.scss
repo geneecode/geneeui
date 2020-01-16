@@ -1,0 +1,245 @@
+.side-nav {
+    height: 100vh;
+    color: map-get($colors, white);
+    z-index: 999999;
+    @include fixed(top 0 left 0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+    // .header-btn {
+    //     width: 48px;
+    //     height: 48px;
+    //     background-color: map-get($colors, secondary);
+    //     color: map-get($colors, white);
+    //     position: relative;
+    //     @extend %FlexCenter;
+
+    //     i {
+    //         @include font-size(18);
+    //         z-index: 999999;
+    //     }
+    // }
+
+    .sidenav-btn {
+        display: block;
+        float: left;
+        width: 58px;
+        height: 58px;
+        background: #130a2e;
+        color: #ffffff;
+
+        > span {
+            padding: 11px 14px;
+        }
+    }
+
+    .hamburger-icon {
+        padding: 15px 18px;
+
+        div {
+            height: 2px;
+            background: #ffffff;
+            width: 20px;
+            margin: 5px 0px;
+            transition: all 0.5s;
+
+            &:nth-child(3) {
+                width: 12px;
+                transition: all 0.5s;
+            }
+        }
+
+        &:hover div:nth-child(3) {
+            width: 20px;
+            transition: all 0.5s;
+        }
+    }
+
+    nav {
+        width: 58px;
+        height: calc(100vh - 58px);
+        background: #130a2e;
+        @include fixed(top 0 left 0);
+        margin-top: 58px;
+        transition: all 0.3s;
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+        overflow-x: hidden;
+
+        ul {
+            @extend %v-list;
+            padding: 0px;
+            width: 100%;
+
+            li {
+                display: inline-block;
+            }
+
+            span.nav-anchor {
+                display: block;
+                width: 58px;
+                padding: 4px 7px 8px 18px;
+                text-decoration: none;
+                transition: 0.3s;
+                @include font-size(11);
+                color: map-get($colors, white);
+                text-align: center;
+                cursor: pointer;
+
+                i {
+                    @include font-size(18);
+                    position: relative;
+                    top: 4px;
+                }
+            }
+        }
+
+        .nav-label {
+            display: none;
+            padding-left: 10px;
+            @include font-size(12);
+        }
+
+        .nav-actions {
+            display: none;
+        }
+
+        .nav-label-l2 {
+            display: none;
+            padding-left: 20px;
+            @include font-size(12);
+        }
+
+        .nav-label-l3 {
+            display: none;
+            padding-left: 25px;
+            @include font-size(10);
+        }
+
+        .menu-section {
+            @include font-size(11);
+            padding: 4px 7px 8px;
+            font-weight: map-get($font-weight, semibold);
+        }
+
+        .sub-menu {
+            display: none;
+            background-color: map-get($colors, sub-menu);
+
+            li > span.nav-anchor {
+                padding: 4px 7px 8px 7px;
+            }
+        }
+
+        .sub-menu-items {
+            display: none;
+
+            li > span.nav-anchor {
+                padding-bottom: 4px !important;
+                padding-left: 40px !important;
+            }
+        }
+
+        .subnav-icon {
+            display: none;
+        }
+
+        .demo-links {
+            display: none;
+
+            li {
+                width: 100%;
+
+                .btn-primary {
+                    width: 100%;
+                    text-align: left;
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background-color: transparent !important;
+                    }
+                }
+            }
+        }
+    }
+
+    //Expanded Side Navigation
+    .SideNavActive {
+        width: 220px !important;
+
+        ul {
+            li {
+                position: relative;
+
+                span.nav-anchor {
+                    width: 220px;
+                    text-align: left !important;
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        background-color: lighten(#130a2e, 15%);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .nav-label {
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .nav-actions {
+            display: inline-block;
+            transition: all 0.3s;
+            .material-icons {
+                @include font-size(13);
+            }
+        }
+
+        .nav-label-l2 {
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .nav-label-l3 {
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .sub-menu {
+            //Toggle to show sub menu
+            &.show-menu {
+                display: inline-block;
+            }
+        }
+
+        .sub-menu-items {
+            //Toggle to show sub menu items
+            &.show-items {
+                display: inline-block;
+            }
+        }
+
+        .subnav-icon {
+            display: inline-block;
+            position: absolute;
+            right: 6px;
+            top: 8px;
+        }
+
+        .demo-links {
+            display: inline-block;
+        }
+    }
+}
+
+.pushContent {
+    margin-left: 220px;
+    transition: margin 0.3s;
+}
+
+// .nav-blue {
+//     nav {
+//         background: map-get($colors, secondary) !important;
+//     }
+// }

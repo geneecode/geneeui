@@ -17,3 +17,6 @@ export { BadgeProps, default as Badge } from './Badge';
 export { CheckboxProps, default as Checkbox } from './Checkbox';
 export { RadioButtonProps, default as RadioButton } from './RadioButton';
 export { DateTimePickerProps, default as DateTimePicker } from './DateTimePicker';
+export { AppBarProps, default as AppBar } from './AppBar';
+export { LinkProps, default as Link } from './Link';
+export { SideBarProps, default as SideBar } from './SideBar';
