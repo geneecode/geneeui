@@ -5,19 +5,6 @@
     @include fixed(top 0 left 0);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 
-    // .header-btn {
-    //     width: 48px;
-    //     height: 48px;
-    //     background-color: map-get($colors, secondary);
-    //     color: map-get($colors, white);
-    //     position: relative;
-    //     @extend %FlexCenter;
-
-    //     i {
-    //         @include font-size(18);
-    //         z-index: 999999;
-    //     }
-    // }
 
     .sidenav-btn {
         display: block;

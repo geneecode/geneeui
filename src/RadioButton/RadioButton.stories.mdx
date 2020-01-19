@@ -27,7 +27,8 @@ markdown documentation.
             <RadioButton
               label="Angular"
               value="Angular"
-              disabled={true}
+                checked={selected === "Angular"}
+              onClick={isChecked => setSelected(isChecked)}
             />
             <RadioButton
               label="Vue"

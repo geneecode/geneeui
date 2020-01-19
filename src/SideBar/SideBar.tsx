@@ -6,19 +6,19 @@ export interface SideBarProps extends HTMLAttributes<HTMLDivElement> {
   open?: boolean;
 }
 
-export const SideBar = forwardRef<HTMLDivElement, SideBarProps>(function(
+export const SideBar = forwardRef<HTMLDivElement, SideBarProps>(function (
   { open = false, children, onToggleDrawer },
   ref,
 ) {
   return (
     <aside className="side-nav" ref={ref}>
-      <a href="#" className="sidenav-btn" onClick={onToggleDrawer}>
+      <span className="sidenav-btn" onClick={onToggleDrawer}>
         <div className="hamburger-icon">
           <div></div>
           <div></div>
           <div></div>
         </div>
-      </a>
+      </span>
 
       <nav className={clsx({ SideNavActive: open })} data-simplebar>
         <div>{children}</div>
