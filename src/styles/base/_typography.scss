@@ -3,7 +3,7 @@ html,
 body {
     font-family: $secondary-font;
     @include font-size(14);
-    color: map-get($colors, white);
+    color: map-get($colors, black);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -79,7 +79,7 @@ h6 {
 
 p {
     @include font-size(14);
-    color: map-get($colors, light-blue);
+    color: map-get($colors, black);
 }
 
 small {

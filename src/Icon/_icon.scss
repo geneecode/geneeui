@@ -1,1 +1,112 @@
-//comment
+.material-icons {
+    color: black;
+
+    &:hover,
+    &:active,
+    &:focus {
+        cursor: pointer;
+    }
+}
+
+//primary button
+.icon-primary {
+    color: map-get($colors, primary) !important;
+    border: none !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: darken((map-get($colors, primary)), 10%) !important;
+    }
+}
+
+//secondary button
+.icon-secondary {
+    color: map-get($colors, secondary) !important;
+    border: none !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: darken((map-get($colors, secondary)), 10%) !important;
+    }
+}
+
+//info button
+.icon-info {
+    color: map-get($colors, info) !important;
+    border: none !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: darken((map-get($colors, info)), 10%) !important;
+    }
+}
+
+//success button
+.icon-success {
+    color: map-get($colors, success) !important;
+    border: none !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: darken((map-get($colors, success)), 10%) !important;
+    }
+}
+
+//warning button
+.icon-warning {
+    color: map-get($colors, warning) !important;
+    border: none !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: darken((map-get($colors, warning)), 10%) !important;
+    }
+}
+
+//danger button
+.icon-danger {
+    color: map-get($colors, danger) !important;
+    border: none !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: darken((map-get($colors, danger)), 10%) !important;
+    }
+}
+
+//white button
+.icon-white {
+    color: map-get($colors, white) !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: darken((map-get($colors, white)), 10%) !important;
+    }
+}
+
+//small button
+.icon-xs {
+    @include font-size(9);
+}
+
+//small button
+.icon-sm {
+    @include font-size(15);
+}
+
+//medium button
+.icon-md {
+    @include font-size(25);
+}
+
+//large button
+.icon-lg {
+    @include font-size(35);
+}

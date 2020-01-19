@@ -1,72 +1,73 @@
 //Import CDN Fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 //Fonts
-$primary-font: 'Montserrat', sans-serif;
-$secondary-font: 'Poppins', sans-serif;
-$icons-font: 'Material Icons';
+$primary-font: "Montserrat", sans-serif;
+$secondary-font: "Poppins", sans-serif;
+$icons-font: "Material Icons";
 
 $base-font: 14;
 $font-weight: (
-  bold: 700,
-  semibold: 600,
-  regular: 400,
-  light: 300,
+    bold: 700,
+    semibold: 600,
+    regular: 400,
+    light: 300
 );
 
 //colors
 $colors: (
-  //Basic
-  primary: #e6264a,
-  secondary: #020a20,
-  tertiary: #f1f4ff,
-  success: #66bb6a,
-  warning: #ffa726,
-  info: #29b6f6,
-  danger: #ef5350,
-  dark: #000000,
-  white: #ffffff,
-  //Other
-  midnight-blue: #181e34,
-  midnight-express: #222945,
-  dark-blue: #0a1229,
-  light-blue: #b0bcda,
-  slate-grey: #717c98,
-  solitude: #f0f3fb,
-  border-color: #313851,
-  text-grey: #7f8fa4,
-  blue-zodiac: #3c445c,
-  blue-whale: #11172c,
-  sub-menu: #c7203f,
-  select-blue: #cad0e0,
-  select-grey: #e4e8f4,
-  disable: #b4b4b4,
-  popover-bg: #2a324c
+    //Basic
+        primary: #e6264a,
+    secondary: #020a20,
+    tertiary: #f1f4ff,
+    success: #66bb6a,
+    warning: #ffa726,
+    info: #29b6f6,
+    danger: #ef5350,
+    dark: #000000,
+    white: #ffffff,
+    //Other
+        midnight-blue: #181e34,
+    midnight-express: #222945,
+    dark-blue: #0a1229,
+    light-blue: #b0bcda,
+    light-grey: #d1d1d1,
+    slate-grey: #717c98,
+    solitude: #f0f3fb,
+    border-color: #313851,
+    text-grey: #7f8fa4,
+    blue-zodiac: #3c445c,
+    blue-whale: #11172c,
+    sub-menu: #c7203f,
+    select-blue: #cad0e0,
+    select-grey: #e4e8f4,
+    disable: #b4b4b4,
+    popover-bg: #2a324c
 );
 
 //Spacing
 $spacer: 1rem !default;
 $spacers: () !default;
 $spacers: map-merge(
-  (
-    0: 0,
-    1: (
-      $spacer * 0.25,
+    (
+        0: 0,
+        1: (
+            $spacer * 0.25
+        ),
+        2: (
+            $spacer * 0.5
+        ),
+        3: $spacer,
+        4: (
+            $spacer * 1.5
+        ),
+        5: (
+            $spacer * 3
+        )
     ),
-    2: (
-      $spacer * 0.5,
-    ),
-    3: $spacer,
-    4: (
-      $spacer * 1.5,
-    ),
-    5: (
-      $spacer * 3,
-    ),
-  ),
-  $spacers
+    $spacers
 );
 
 //Grid
@@ -76,16 +77,16 @@ $enable-grid-classes: true !default;
 $displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
 
 $grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
 ) !default;
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px
 ) !default;

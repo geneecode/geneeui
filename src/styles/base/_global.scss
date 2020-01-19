@@ -13,7 +13,7 @@ body {
 label {
     display: inline-block;
     width: 100%;
-    color: map-get($colors, light-blue);
+    color: black;
     font-family: $secondary-font;
     font-weight: map-get($font-weight, semibold);
     @include font-size(12);
@@ -26,5 +26,5 @@ main {
     margin-left: 48px;
     padding: 15px 20px;
     min-height: calc(100vh - 48px);
-    background-color: #231358;
+    background-color: #f0f0f0;
 }

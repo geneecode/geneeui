@@ -11,7 +11,7 @@
     z-index: 99999 !important;
     background: transparent !important;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
-    border: 1px solid #f9f9f9 !important;
+    border: 1px solid black !important;
 }
 
 .rdtOpen .rdtPicker {
@@ -24,7 +24,7 @@
 }
 
 .rdtDay.in-selecting-range {
-    background-color: #68222f !important;
+    background-color: #000000 !important;
 }
 
 .rdtPicker {
@@ -297,8 +297,8 @@ td {
 .form-control {
     padding: 9px;
     background-color: transparent !important;
-    color: map-get($colors, light-blue) !important;
-    border: 1px solid map-get($colors, light-blue) !important;
+    color: rgb(116, 116, 116) !important;
+    border: 1px solid rgb(116, 116, 116) !important;
     border-radius: 5px !important;
     outline: none !important;
     font-family: $secondary-font !important;
@@ -308,8 +308,8 @@ td {
 
     &:focus,
     &:active {
-        border: 1px solid map-get($colors, white) !important;
-        color: map-get($colors, white) !important;
+        border: 1px solid map-get($colors, black) !important;
+        color: map-get($colors, black) !important;
         outline: none !important;
     }
 }

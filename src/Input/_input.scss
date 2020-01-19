@@ -1,62 +1,62 @@
 .form-input {
-  width: 100%;
-  padding: 10px;
-  background-color: transparent;
-  color: map-get($colors, light-blue);
-  border: 1px solid map-get($colors, light-blue);
-  border-radius: 3px;
-  outline: none;
-  font-family: $secondary-font;
-  @include font-size(11);
-  margin-bottom: 10px;
-  box-sizing: border-box;
-
-  &:focus,
-  &:active {
-    border: 1px solid map-get($colors, white);
-    color: map-get($colors, white) !important;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    color: rgb(116, 116, 116);
+    border: 1px solid rgb(116, 116, 116);
+    border-radius: 3px;
     outline: none;
-  }
+    font-family: $secondary-font;
+    @include font-size(11);
+    margin-bottom: 10px;
+    box-sizing: border-box;
 
-  &.error-input {
-    border: 1px solid map-get($colors, danger) !important;
-    margin-bottom: 2px;
-    &:hover,
-    &:active,
-    &:focus {
-      border: 1px solid map-get($colors, danger) !important;
+    &:focus,
+    &:active {
+        border: 1px solid black;
+        color: black;
+        outline: none;
     }
-  }
+
+    &.error-input {
+        border: 1px solid map-get($colors, danger) !important;
+        margin-bottom: 2px;
+        &:hover,
+        &:active,
+        &:focus {
+            border: 1px solid map-get($colors, danger) !important;
+        }
+    }
 }
 
 @include placeholder {
-  color: map-get($colors, slate-grey);
-  &:focus,
-  &:active {
-    color: map-get($colors, white) !important;
-  }
+    color: map-get($colors, slate-grey);
+    &:focus,
+    &:active {
+        color: map-get($colors, white) !important;
+    }
 }
 
 .error-message {
-  display: block;
+    display: block;
 
-  span {
-    display: inline-block;
-    color: map-get($colors, danger);
-    @include font-size(12);
-  }
+    span {
+        display: inline-block;
+        color: map-get($colors, danger);
+        @include font-size(12);
+    }
 
-  i {
-    color: map-get($colors, danger);
-    @include font-size(14);
-    vertical-align: middle;
-    margin-right: 4px;
-  }
+    i {
+        color: map-get($colors, danger);
+        @include font-size(14);
+        vertical-align: middle;
+        margin-right: 4px;
+    }
 }
 
 .form-inline {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
