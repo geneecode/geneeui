@@ -1,7 +1,7 @@
 import { addons } from '@storybook/addons';
 import { create } from '@storybook/theming/create';
 
-const theme = create({
+const genee = create({
   base: 'light',
 
   colorPrimary: '#222945',
@@ -31,5 +31,5 @@ const theme = create({
 });
 
 addons.setConfig({
-  theme
+  theme: genee
 });
