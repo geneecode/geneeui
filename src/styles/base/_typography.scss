@@ -3,14 +3,14 @@ html,
 body {
     font-family: $secondary-font;
     @include font-size(14);
-    color: map-get($colors, white);
+    color: map-get($colors, black);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
 
 a {
-    color: map-get($colors, light-blue);
+    color: rgb(156, 156, 156);
     @include font-size(14);
     text-decoration: none;
     outline: 0;
@@ -19,7 +19,7 @@ a {
     &:hover,
     &:active,
     &:focus {
-        color: darken($color: map-get($colors, white), $amount: 10%);
+        color: darken(rgb(68, 68, 68), $amount: 10%);
         text-decoration: none;
     }
 }
@@ -79,7 +79,7 @@ h6 {
 
 p {
     @include font-size(14);
-    color: map-get($colors, light-blue);
+    color: map-get($colors, black);
 }
 
 small {

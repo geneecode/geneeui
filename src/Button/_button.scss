@@ -19,8 +19,8 @@
     &:hover,
     &:active,
     &:focus {
-        color: map-get($colors, white) !important;
-        border-color: map-get($colors, white) !important;
+        color: map-get($colors, black) !important;
+        border-color: map-get($colors, black) !important;
     }
 }
 

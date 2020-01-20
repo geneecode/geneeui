@@ -64,33 +64,35 @@ markdown documentation.
         >
         <SideBarSection
           label="Employee"
-          actions={<Icon>add</Icon>}
+          actions={<Icon variant="white">add</Icon>}
         >
           <SideBarItem
             onClick={() => console.log(123)}
             icon="people"
+            iconVariant="white"
             label="Employee Group"
             level={1}
             actions={
               <>
                 <a>
-                  <Icon>add</Icon>
+                  <Icon variant="white">add</Icon>
                 </a>
                 <a>
-                  <Icon>edit</Icon>
+                  <Icon variant="white">edit</Icon>
                 </a>
               </>
             }
           />
           <SideBarItem
             icon="people"
+            iconVariant="white"
             label="Employee Group"
             level={1}
           />
         </SideBarSection>
       </SideBar>
         <main className={clsx({ pushContent: open })}>
-          <h1>Test Header</h1>
+          <h1>Main Content Goes Here</h1>
         </main>
     </>
   );

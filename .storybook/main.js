@@ -4,7 +4,6 @@ module.exports = {
   stories: ['../src/**/*.stories.mdx'],
   addons: [
     '@storybook/addon-actions',
-    '@storybook/addon-options',
     '@storybook/preset-scss',
     '@storybook/addon-docs/preset',
     {

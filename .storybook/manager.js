@@ -1,11 +1,11 @@
 import { addons } from '@storybook/addons';
 import { create } from '@storybook/theming/create';
 
-const theme = create({
+const genee = create({
   base: 'light',
 
   colorPrimary: '#222945',
-  colorSecondary: '#22ad3e',
+  colorSecondary: '#727272',
 
   // UI
   appBg: 'white',
@@ -23,7 +23,7 @@ const theme = create({
 
   // Toolbar default and active colors
   barTextColor: '#9D9D9D',
-  barSelectedColor: '#22ad3e',
+  barSelectedColor: '#727272',
   barBg: 'white',
 
   brandTitle: 'GeneeCode',
@@ -31,6 +31,5 @@ const theme = create({
 });
 
 addons.setConfig({
-  panelPosition: 'bottom',
-  theme,
+  theme: genee
 });

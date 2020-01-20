@@ -1,32 +1,72 @@
-.ag-theme-material {
-    background-color: transparent !important;
-    color: #fff;
-    cursor: pointer;
+.ag-root-wrapper {
+    border-radius: 10px;
+}
 
-    .ag-header {
-        background-color: transparent !important;
-        border: 1px solid #313851 !important;
-        color: #fff;
+.ag-filter-select {
+    background-color: transparent;
+    color: rgb(116, 116, 116);
+    border: 1px solid rgb(116, 116, 116);
+    border-radius: 5px;
+    outline: none;
+    font-family: $secondary-font;
+    @include font-size(12);
+
+    &:focus,
+    &:active {
+        border: 1px solid black;
+        color: map-get($colors, black);
+        outline: none;
+    }
+
+    > option {
+        color: map-get($colors, black) !important;
+        font-family: $secondary-font;
+        @include font-size(13);
 
         &:hover,
         &:focus,
         &:active {
-            background-color: transparent;
-            color: #fff;
-            // box-shadow: 0px 3px 29.76px 2.24px rgba(0, 0, 0, 0.49);
+            background-color: map-get($colors, light-grey) !important;
+            color: red !important;
+        }
+    }
+}
+
+.ag-filter-filter {
+    &:hover,
+    &:focus,
+    &:active {
+        border-bottom: 2px solid map-get($colors, black) !important;
+    }
+}
+
+.ag-theme-material {
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+    cursor: pointer;
+    .ag-icon-checkbox-checked {
+        color: rgb(158, 158, 158);
+    }
+
+    .ag-header {
+        background-color: #f9fafc !important;
+        color: black;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: rgb(172, 172, 172);
         }
 
         .ag-header-cell {
             background-color: transparent !important;
-            border: 1px solid #313851 !important;
-            color: #fff;
+            color: black;
+            text-transform: uppercase;
 
             &:hover,
             &:focus,
             &:active {
-                background-color: transparent;
-                color: #fff;
-                // box-shadow: 0px 3px 29.76px 2.24px rgba(0, 0, 0, 0.49);
+                background-color: rgb(172, 172, 172);
             }
         }
 
@@ -35,23 +75,22 @@
         }
 
         .ag-icon {
-            color: map-get($colors, slate-grey) !important;
+            color: map-get($colors, black) !important;
         }
 
         .ag-column-hover {
             background-color: transparent !important;
-            border: 1px solid #313851 !important;
-            color: #fff;
+            color: black;
 
             .ag-icon {
-                color: #ffffff !important;
+                color: black !important;
             }
         }
     }
 
     .ag-cell {
         .ag-icon {
-            color: map-get($colors, white) !important;
+            color: map-get($colors, black) !important;
         }
     }
 
@@ -61,29 +100,30 @@
     }
 
     .ag-row {
-        border-color: #313851 !important;
+        color: black;
         cursor: pointer;
     }
     .ag-row-hover {
-        background-color: transparent !important;
-        color: #fff !important;
+        background-color: #f9fafc !important;
+
+        color: black !important;
         cursor: pointer;
-        border-color: #313851 !important;
         outline: 0 !important;
     }
 
     .ag-row-selected {
-        background-color: transparent !important;
-        color: #fff !important;
-        border-color: #020a20 !important;
+        background-color: #f9fafc !important;
+
+        color: black !important;
         outline: 0 !important;
     }
 
     .ag-paging-panel {
-        color: map-get($colors, white);
+        background-color: #f9fafc !important;
+        color: map-get($colors, black);
 
         .ag-icon {
-            color: map-get($colors, white);
+            color: map-get($colors, black);
         }
     }
 

@@ -19,8 +19,8 @@
     }
 
     &.badge-default {
-        color: map-get($colors, secondary);
-        background-color: map-get($colors, tertiary);
+        color: map-get($colors, black);
+        // background-color: map-get($colors, tertiary);
     }
 
     &.badge-primary {

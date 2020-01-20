@@ -19,7 +19,7 @@ export const logo = (
   <a className="topbar-logo" href="#"
     {...logoActions}
   >
-    <img src={require("../../public/assets/GeneeCodeLogoHorizontal.png")} alt="..." />
+    <img src={require("../../public/assets/GeneeCode.png")} alt="..." />
   </a>
 ); 
 
@@ -30,13 +30,13 @@ export const linkActions = {
 export const links = (
   <ul>
     <li>
-      <Link {...linkActions}>Link 1</Link>
+      <Link {...linkActions}>Home</Link>
     </li>
     <li>
-      <Link {...linkActions}>Link 2</Link>
+      <Link {...linkActions}>About</Link>
     </li>
     <li>
-      <Link {...linkActions}>Link 3</Link>
+      <Link {...linkActions}>FAQ</Link>
     </li>
   </ul>
 );
@@ -47,9 +47,8 @@ export const controlActions = {
 
 export const controls = (
   <ul className="topbar-controls">
-    <li><a {...controlActions}><Icon>search</Icon></a></li>
-    <li><a {...controlActions}><Icon>notifications</Icon></a></li>
-    <li><a {...controlActions}><Icon>apps</Icon></a></li>
+    <li><a {...controlActions}><Icon variant="white" >search</Icon></a></li>
+    <li><a {...controlActions}><Icon variant="white" >chat</Icon></a></li>
   </ul>
 );
 
