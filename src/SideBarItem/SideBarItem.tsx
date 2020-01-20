@@ -1,10 +1,11 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes, ReactNode, forwardRef } from 'react';
-import Icon from '../Icon';
+import Icon, { IconVariant } from '../Icon';
 
 interface SideBarItemItemBaseProps extends HTMLAttributes<HTMLAnchorElement> {
   label: string;
   actions?: ReactNode;
+  iconVariant?: IconVariant;
 }
 
 interface SideBarItemItemWithIconProps extends SideBarItemItemBaseProps {
@@ -19,15 +20,15 @@ interface SideBarItemItemWithoutIconProps extends SideBarItemItemBaseProps {
 
 export type SideBarItemItemProps = SideBarItemItemWithIconProps | SideBarItemItemWithoutIconProps;
 
-export const SideBarItemItem = forwardRef<HTMLLIElement, SideBarItemItemProps>(function(
-  { icon, children, level, label, actions, ...props },
+export const SideBarItemItem = forwardRef<HTMLLIElement, SideBarItemItemProps>(function (
+  { icon, children, level, label, actions, iconVariant, ...props },
   ref,
 ) {
   return (
     <li ref={ref}>
       <span {...props} className="d-flex justify-content-between align-items-center nav-anchor">
         <div>
-          {icon && <Icon>{icon}</Icon>}
+          {icon && <Icon variant={iconVariant}>{icon}</Icon>}
           <span
             className={clsx({
               'nav-label': level === 1,

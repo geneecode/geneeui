@@ -5,13 +5,12 @@
     @include fixed(top 0 left 0);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 
-
     .sidenav-btn {
         display: block;
         float: left;
         width: 58px;
         height: 58px;
-        background: #130a2e;
+        background: rgba(0, 0, 0, 0.5);
         color: #ffffff;
 
         > span {
@@ -35,6 +34,10 @@
             }
         }
 
+        &:hover {
+            cursor: pointer;
+        }
+
         &:hover div:nth-child(3) {
             width: 20px;
             transition: all 0.5s;
@@ -44,7 +47,7 @@
     nav {
         width: 58px;
         height: calc(100vh - 58px);
-        background: #130a2e;
+        background: rgba(0, 0, 0, 0.5);
         @include fixed(top 0 left 0);
         margin-top: 58px;
         transition: all 0.3s;

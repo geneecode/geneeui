@@ -10,7 +10,7 @@ body {
 }
 
 a {
-    color: map-get($colors, light-blue);
+    color: rgb(156, 156, 156);
     @include font-size(14);
     text-decoration: none;
     outline: 0;
@@ -19,7 +19,7 @@ a {
     &:hover,
     &:active,
     &:focus {
-        color: darken($color: map-get($colors, white), $amount: 10%);
+        color: darken(rgb(68, 68, 68), $amount: 10%);
         text-decoration: none;
     }
 }
