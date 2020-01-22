@@ -10,11 +10,11 @@ export interface IconProps {
   className?: string;
   children: string;
   /**
- * To apply variant to Button
+ * To apply variant to Icon
  **/
   variant?: IconVariant;
   /**
-   * To apply size to Button
+   * To apply size to Icon
    **/
   size?: IconSize;
   onClick?: () => void;

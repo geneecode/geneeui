@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import TestUtils from 'react-dom/test-utils';
 import AppBar from './AppBar';
 import Link from '../Link';
 import Icon from '../Icon';
+describe('AppBar', () => {
 
-//FIXME: This is just a sample test
-it('renders', () => {
   const div = document.createElement('div');
 
   const logo = (
@@ -56,10 +56,29 @@ it('renders', () => {
     </div>
   );
 
-  ReactDOM.render(<AppBar logo={logo} links={links} controls={controls} userAvatar={userAvatar} />, div);
 
-  const comp = div.querySelector('div');
-  expect(comp).toBeDefined();
+  it('isElementOfType is React element', () => {
+    expect(TestUtils.isElementOfType(<AppBar />, AppBar)).toEqual(true);
+  });
 
-  ReactDOM.unmountComponentAtNode(div);
+
+  it('renders', () => {
+
+    ReactDOM.render(<AppBar
+      className="test"
+      logo={logo}
+      links={links}
+      controls={controls}
+      userAvatar={userAvatar}
+      sideNavActive={false}
+      ref={null}
+    />, div);
+    const comp = div.querySelector('div');
+    expect(comp).toBeDefined();
+
+    ReactDOM.unmountComponentAtNode(div);
+  });
+
+
+
 });
