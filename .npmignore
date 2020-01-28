@@ -134,3 +134,25 @@ scripts*
 
 # Storybook Files
 *.stories.*
+
+
+# Assets
+public/
+
+# Prettier
+.prettierrc
+
+# CODE_OF_CONDUCT
+CODE_OF_CONDUCT
+
+# CONTRIBUTING
+CONTRIBUTING
+
+# TS Config
+tsconfig.*
+
+# LICENSE
+LICENSE
+
+# Workflows
+.github
