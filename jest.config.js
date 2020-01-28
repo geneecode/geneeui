@@ -10,7 +10,7 @@ module.exports = {
     'ts',
     'tsx'
   ],
-  rootDir: 'src',
+  rootDir: 'src/',
   testRegex: '.test.tsx?$',
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
