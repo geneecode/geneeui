@@ -25,3 +25,4 @@ export { LinkProps, default as Link } from './Link';
 export { SideBarProps, default as SideBar } from './SideBar';
 export { SideBarSectionProps, default as SideBarSection } from './SideBarSection';
 export { SideBarItemProps, default as SideBarItem } from './SideBarItem';
+export { MainProps, default as Main } from './Main';

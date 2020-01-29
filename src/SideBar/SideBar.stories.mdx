@@ -8,6 +8,7 @@ import SideBarItem from '../SideBarItem/SideBarItem';
 import SideBarSection from '../SideBarSection';
 import Icon from '../Icon';
 import SideBar from './SideBar';
+import Main from '../Main';
 
 
 
@@ -91,9 +92,9 @@ markdown documentation.
           />
         </SideBarSection>
       </SideBar>
-        <main className={clsx({ pushContent: open })}>
+        <Main pushContent={open} >
           <h1>Main Content Goes Here</h1>
-        </main>
+        </Main>
     </>
   );
       }

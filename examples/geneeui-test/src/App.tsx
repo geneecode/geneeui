@@ -80,7 +80,7 @@ const App: React.FC = () => {
           />
         </SideBarSection>
       </SideBar>
-      <main className={clsx("p-3", { pushContent: open })}>
+      <main className={clsx("", { pushContent: open })}>
 
         <Button variant="primary"> Button Test</Button>
         <br />
