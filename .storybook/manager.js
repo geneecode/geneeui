@@ -27,7 +27,7 @@ const genee = create({
   barBg: 'white',
 
   brandTitle: 'GeneeCode',
-  brandUrl: 'https://geneecode.com/geneeui',
+  brandUrl: 'https://geneecode.com/geneeui'
 });
 
 addons.setConfig({

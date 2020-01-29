@@ -1,17 +1,17 @@
 <p align="center">
   <a href="https://geneecode.com/">
-    <img src="./public/assets/GeneeCodeLogo.png" alt="GeneeUI" width="400" />
+    <img src="./public/assets/geneeui.png" alt="GeneeUI" width="600" />
   </a>
 </p>
 
-### This is a product of GeneeCode.com
+### This is a product by geneecode.com
 ### This is a work in progress, actively being built and monitored. Stay Tuned.
 
 # GeneeUI
 This is a React based implementation of Component Library. This project is actively being developed, so expect changes/additions. The basic usage is outlined below.
 
 ## Checkout Storybook at 
-<a href="http://geneecode.com/geneeui" target="_blank" >Click me to Open Storybook</a>
+<a href="http://geneecode.com/geneeui" target="_blank" >Goto GeneeUI</a>
 
 ## Usage
 First install the library
