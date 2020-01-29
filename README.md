@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://geneecode.com/">
-    <img src="./public/assets/GeneeCodeLogo.png" alt="GeneeUI" width="400" />
+    <img src="./public/assets/gclogo.png" alt="GeneeUI" width="400" />
   </a>
 </p>
 
