@@ -5,7 +5,7 @@ export interface SideBarSectionProps extends HTMLAttributes<HTMLUListElement> {
   actions?: ReactNode;
 }
 
-export const SideBarSection = forwardRef<HTMLUListElement, SideBarSectionProps>(function (
+export const SideBarSection = forwardRef<HTMLUListElement, SideBarSectionProps>(function(
   { label, actions, children },
   ref,
 ) {

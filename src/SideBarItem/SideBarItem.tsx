@@ -20,7 +20,7 @@ interface SideBarItemItemWithoutIconProps extends SideBarItemItemBaseProps {
 
 export type SideBarItemProps = SideBarItemItemWithIconProps | SideBarItemItemWithoutIconProps;
 
-export const SideBarItem = forwardRef<HTMLLIElement, SideBarItemProps>(function (
+export const SideBarItem = forwardRef<HTMLLIElement, SideBarItemProps>(function(
   { icon, children, level, label, actions, iconVariant, ...props },
   ref,
 ) {

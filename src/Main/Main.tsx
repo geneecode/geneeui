@@ -6,7 +6,7 @@ export interface MainProps extends HTMLAttributes<HTMLDivElement> {
   pushContent?: boolean;
 }
 
-export const Main: FC<MainProps> = function ({ children, className, pushContent, ...props }) {
+export const Main: FC<MainProps> = function({ children, className, pushContent, ...props }) {
   return (
     <main {...props} className={clsx(className, { pushContent: pushContent })}>
       {children}

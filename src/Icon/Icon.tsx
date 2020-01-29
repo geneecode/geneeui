@@ -10,8 +10,8 @@ export interface IconProps {
   className?: string;
   children: string;
   /**
- * To apply variant to Icon
- **/
+   * To apply variant to Icon
+   **/
   variant?: IconVariant;
   /**
    * To apply size to Icon
@@ -20,11 +20,17 @@ export interface IconProps {
   onClick?: () => void;
 }
 
-export const Icon = forwardRef<HTMLDivElement, IconProps>(function ({ title, className, children, onClick, variant, size }, ref) {
+export const Icon = forwardRef<HTMLDivElement, IconProps>(function(
+  { title, className, children, onClick, variant, size },
+  ref,
+) {
   return (
-    <i title={title} onClick={onClick}
+    <i
+      title={title}
+      onClick={onClick}
       className={clsx('material-icons', className, `icon-${variant}`, { [`icon-${size}`]: size })}
-      ref={ref}>
+      ref={ref}
+    >
       {children}
     </i>
   );

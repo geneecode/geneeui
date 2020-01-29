@@ -13,13 +13,16 @@ it('renders', () => {
       height: '50px',
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center'
-    }
+      justifyContent: 'center',
+    },
   };
 
   ReactDOM.render(
-    <Col {...cellStyles} size={10} offset={4} md={4} sm={8}>size=10 offset=4</Col>
-    , div);
+    <Col {...cellStyles} size={10} offset={4} md={4} sm={8}>
+      size=10 offset=4
+    </Col>,
+    div,
+  );
 
   const comp = div.querySelector('div');
   expect(comp).toBeDefined();
