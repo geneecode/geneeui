@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 export interface ModalBodyProps extends HTMLAttributes<HTMLDivElement> {}
 
-const ModalBody: FC<ModalBodyProps> = function({ className, ...props }) {
+export const ModalBody: FC<ModalBodyProps> = function({ className, ...props }) {
   return <section {...props} className={clsx('modal-body', className)} />;
 };
 

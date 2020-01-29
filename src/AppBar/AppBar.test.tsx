@@ -5,7 +5,6 @@ import AppBar from './AppBar';
 import Link from '../Link';
 import Icon from '../Icon';
 describe('AppBar', () => {
-
   const div = document.createElement('div');
 
   const logo = (
@@ -56,29 +55,26 @@ describe('AppBar', () => {
     </div>
   );
 
-
   it('isElementOfType is React element', () => {
     expect(TestUtils.isElementOfType(<AppBar />, AppBar)).toEqual(true);
   });
 
-
   it('renders', () => {
-
-    ReactDOM.render(<AppBar
-      className="test"
-      logo={logo}
-      links={links}
-      controls={controls}
-      userAvatar={userAvatar}
-      sideNavActive={false}
-      ref={null}
-    />, div);
+    ReactDOM.render(
+      <AppBar
+        className="test"
+        logo={logo}
+        links={links}
+        controls={controls}
+        userAvatar={userAvatar}
+        sideNavActive={false}
+        ref={null}
+      />,
+      div,
+    );
     const comp = div.querySelector('div');
     expect(comp).toBeDefined();
 
     ReactDOM.unmountComponentAtNode(div);
   });
-
-
-
 });

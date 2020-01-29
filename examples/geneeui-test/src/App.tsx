@@ -1,13 +1,15 @@
-import React from 'react';
-import Button from 'geneeui/lib/Button';
+import React, { useCallback, useState } from 'react';
+import { withLayout } from './components/Layout';
 
+export interface AppProps {
 
-const App: React.FC = () => {
+}
+
+export const App: React.FC<AppProps> = () => {
 
   return (
-      <Button size="md" variant="primary" >asd</Button>
-    
+    <h1>Hello</h1>
   );
 }
 
-export default App;
+export default withLayout(App);

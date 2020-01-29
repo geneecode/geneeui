@@ -14,8 +14,8 @@ it('renders', () => {
       height: '50px',
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center'
-    }
+      justifyContent: 'center',
+    },
   };
 
   ReactDOM.render(
@@ -23,8 +23,9 @@ it('renders', () => {
       <Col {...cellStyles}>No size specified</Col>
       <Col {...cellStyles}>No size specified</Col>
       <Col {...cellStyles}>No size specified</Col>
-    </Row>
-    , div);
+    </Row>,
+    div,
+  );
 
   const comp = div.querySelector('div');
   expect(comp).toBeDefined();

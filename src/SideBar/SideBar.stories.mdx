@@ -8,6 +8,7 @@ import SideBarItem from '../SideBarItem/SideBarItem';
 import SideBarSection from '../SideBarSection';
 import Icon from '../Icon';
 import SideBar from './SideBar';
+import Main from '../Main';
 
 
 
@@ -64,36 +65,34 @@ markdown documentation.
         >
         <SideBarSection
           label="Blogs"
-          actions={<Icon variant="white">add</Icon>}
+          actions={<Icon >add</Icon>}
         >
           <SideBarItem
             onClick={() => console.log(123)}
             icon="library_books"
-            iconVariant="white"
             label="Blog 1"
             level={1}
             actions={
               <>
                 <a>
-                  <Icon variant="white">add</Icon>
+                  <Icon >add</Icon>
                 </a>
                 <a>
-                  <Icon variant="white">edit</Icon>
+                  <Icon >edit</Icon>
                 </a>
               </>
             }
           />
           <SideBarItem
             icon="library_books"
-            iconVariant="white"
             label="Blog 2"
             level={1}
           />
         </SideBarSection>
       </SideBar>
-        <main className={clsx({ pushContent: open })}>
+        <Main pushContent={open} >
           <h1>Main Content Goes Here</h1>
-        </main>
+        </Main>
     </>
   );
       }

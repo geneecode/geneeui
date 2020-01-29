@@ -52,11 +52,17 @@ it('renders', () => {
     createData('John', 'Doe', 'Senior Software Engr.', 'FooBar Inc.'),
   ];
 
-  ReactDOM.render(<Table columnDefs={columnDefs} rowData={rowData} pagination={true}
-    paginationPageSize={8}
-    wrapperclassName="wrapper"
-    suppressHorizontalScroll={true}
-  />, div);
+  ReactDOM.render(
+    <Table
+      columnDefs={columnDefs}
+      rowData={rowData}
+      pagination={true}
+      paginationPageSize={8}
+      wrapperclassName="wrapper"
+      suppressHorizontalScroll={true}
+    />,
+    div,
+  );
 
   const comp = div.querySelector('div');
   expect(comp).toBeDefined();

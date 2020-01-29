@@ -1,6 +1,6 @@
 .side-nav {
     height: 100vh;
-    color: map-get($colors, white);
+    color: black;
     z-index: 999999;
     @include fixed(top 0 left 0);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
@@ -10,8 +10,8 @@
         float: left;
         width: 58px;
         height: 58px;
-        background: rgba(0, 0, 0, 0.5);
-        color: #ffffff;
+        background: rgba(255, 255, 255, 1);
+        color: #000000;
 
         > span {
             padding: 11px 14px;
@@ -23,7 +23,7 @@
 
         div {
             height: 2px;
-            background: #ffffff;
+            background: #000000;
             width: 20px;
             margin: 5px 0px;
             transition: all 0.5s;
@@ -47,7 +47,7 @@
     nav {
         width: 58px;
         height: calc(100vh - 58px);
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(255, 255, 255, 1);
         @include fixed(top 0 left 0);
         margin-top: 58px;
         transition: all 0.3s;
@@ -70,7 +70,7 @@
                 text-decoration: none;
                 transition: 0.3s;
                 @include font-size(11);
-                color: map-get($colors, white);
+                color: black;
                 text-align: center;
                 cursor: pointer;
 

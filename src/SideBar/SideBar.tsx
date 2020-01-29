@@ -6,7 +6,7 @@ export interface SideBarProps extends HTMLAttributes<HTMLDivElement> {
   open?: boolean;
 }
 
-export const SideBar = forwardRef<HTMLDivElement, SideBarProps>(function (
+export const SideBar = forwardRef<HTMLDivElement, SideBarProps>(function(
   { open = false, children, onToggleDrawer },
   ref,
 ) {

@@ -20,6 +20,8 @@
     "jsx": "preserve"
   },
   "include": [
-    "src"
+    "src",
+    "src/public/components",
+    "public"
   ]
 }
