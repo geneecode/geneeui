@@ -36,8 +36,8 @@ export const Layout: FC<LayoutProps> = function ({ children }) {
         }
         controls={
           <ul className="topbar-controls">
-            <li><a ><Icon variant="white" >search</Icon></a></li>
-            <li><a ><Icon variant="white" >chat</Icon></a></li>
+            <li><a ><Icon  >search</Icon></a></li>
+            <li><a ><Icon  >chat</Icon></a></li>
           </ul>
         }
         userAvatar={
@@ -55,28 +55,26 @@ export const Layout: FC<LayoutProps> = function ({ children }) {
       >
         <SideBarSection
           label="Blogs"
-          actions={<Icon variant="white">add</Icon>}
+          actions={<Icon >add</Icon>}
         >
           <SideBarItem
             onClick={() => console.log(123)}
             icon="library_books"
-            iconVariant="white"
             label="Blog 1"
             level={1}
             actions={
               <>
                 <a>
-                  <Icon variant="white">add</Icon>
+                  <Icon >add</Icon>
                 </a>
                 <a>
-                  <Icon variant="white">edit</Icon>
+                  <Icon >edit</Icon>
                 </a>
               </>
             }
           />
           <SideBarItem
             icon="library_books"
-            iconVariant="white"
             label="Blog 2"
             level={1}
           />
