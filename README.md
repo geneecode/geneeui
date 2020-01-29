@@ -1,12 +1,3 @@
-<p align="center">
-  <a href="https://geneecode.com/">
-    <img src="./public/assets/geneeui.png" alt="GeneeUI" width="600" />
-  </a>
-</p>
-
-### This is a product by geneecode.com
-### This is a work in progress, actively being built and monitored. Stay Tuned.
-
 # GeneeUI
 This is a React based implementation of Component Library. This project is actively being developed, so expect changes/additions. The basic usage is outlined below.
 
