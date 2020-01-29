@@ -1,3 +1,17 @@
+![Build](https://img.shields.io/badge/build-passing-brightgreen)
+![Test](https://img.shields.io/badge/test-passing-success)
+![Coverage](https://img.shields.io/badge/coverage-94-green)
+![NPM](https://img.shields.io/badge/npm-1.0.4-blue)
+![Dependencies](https://img.shields.io/badge/dependencies-uptodate-yellow)
+![Dev Dependencies](https://img.shields.io/badge/devDependencies-uptodate-yellow)
+![Storybook](https://img.shields.io/badge/storybook-deployed-orange)
+![Liscense](https://img.shields.io/github/license/geneecode/geneeui)
+![Stars](https://img.shields.io/github/stars/geneecode/geneeui)
+![Issues](https://img.shields.io/github/issues/geneecode/geneeui)
+![Forks](https://img.shields.io/github/forks/geneecode/geneeui)
+
+
+
 # GeneeUI
 This is a React based implementation of Component Library. This project is actively being developed, so expect changes/additions. The basic usage is outlined below.
 
