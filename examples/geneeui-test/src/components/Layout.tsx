@@ -90,3 +90,18 @@ export const Layout: FC<LayoutProps> = function ({ children }) {
 }
 
 export default Layout;
+
+
+export const withLayout = function (
+  WrappedComponent: React.FC,
+  layoutProps?: Omit<LayoutProps, 'children'>
+) {
+  const WithLayout = (props: any) => (
+    <Layout {...layoutProps}>
+      <WrappedComponent {...props} />
+    </Layout>
+  );
+
+
+  return WithLayout;
+};

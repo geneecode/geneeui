@@ -21,7 +21,7 @@
   },
   "include": [
     "src",
-    "components",
+    "src/public/components",
     "public"
   ]
 }
