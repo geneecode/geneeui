@@ -7,7 +7,7 @@ export interface ModalHeaderProps extends Omit<HTMLAttributes<HTMLDivElement>, '
   onClose: () => void;
 }
 
-const ModalHeader: FC<ModalHeaderProps> = function({ className, children, title, onClose, ...props }) {
+export const ModalHeader: FC<ModalHeaderProps> = function ({ className, children, title, onClose, ...props }) {
   return (
     <section {...props} className={clsx('modal-header', className)}>
       {title && <div className="modal-title">{title}</div>}

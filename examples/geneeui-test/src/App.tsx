@@ -1,10 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { AppBar, Link, Icon, SideBar, Button, Modal } from 'geneeui/';
-import ModalFooter from 'geneeui/lib/ModalFooter';
-import ModalHeader from 'geneeui/lib/ModalHeader';
-import ModalBody from 'geneeui/lib/ModalBody';
-import { SideBarSection } from 'geneeui/lib/SideBarSection';
-import SideBarItem from 'geneeui/lib/SideBarItem';
+import { AppBar, Link, Icon, SideBar, Button, Modal, ModalFooter, ModalHeader, ModalBody, SideBarSection, SideBarItem } from 'geneeui';
 import clsx from 'clsx';
 
 const App: React.FC = () => {

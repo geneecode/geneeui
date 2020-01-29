@@ -18,9 +18,9 @@ interface SideBarItemItemWithoutIconProps extends SideBarItemItemBaseProps {
   level: 2 | 3;
 }
 
-export type SideBarItemItemProps = SideBarItemItemWithIconProps | SideBarItemItemWithoutIconProps;
+export type SideBarItemProps = SideBarItemItemWithIconProps | SideBarItemItemWithoutIconProps;
 
-export const SideBarItemItem = forwardRef<HTMLLIElement, SideBarItemItemProps>(function (
+export const SideBarItem = forwardRef<HTMLLIElement, SideBarItemProps>(function (
   { icon, children, level, label, actions, iconVariant, ...props },
   ref,
 ) {
@@ -48,4 +48,4 @@ export const SideBarItemItem = forwardRef<HTMLLIElement, SideBarItemItemProps>(f
   );
 });
 
-export default SideBarItemItem;
+export default SideBarItem;

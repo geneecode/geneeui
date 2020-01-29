@@ -13,6 +13,9 @@ export { PopoverProps, default as Popover } from './Popover';
 export { FileUploaderProps, default as FileUploader } from './FileUploader';
 export { ColorPickerProps, default as ColorPicker } from './ColorPicker';
 export { ModalProps, default as Modal } from './Modal';
+export { ModalHeaderProps, default as ModalHeader } from './ModalHeader';
+export { ModalBodyProps, default as ModalBody } from './ModalBody';
+export { ModalFooterProps, default as ModalFooter } from './ModalFooter';
 export { BadgeProps, default as Badge } from './Badge';
 export { CheckboxProps, default as Checkbox } from './Checkbox';
 export { RadioButtonProps, default as RadioButton } from './RadioButton';
@@ -20,3 +23,5 @@ export { DateTimePickerProps, default as DateTimePicker } from './DateTimePicker
 export { AppBarProps, default as AppBar } from './AppBar';
 export { LinkProps, default as Link } from './Link';
 export { SideBarProps, default as SideBar } from './SideBar';
+export { SideBarSectionProps, default as SideBarSection } from './SideBarSection';
+export { SideBarItemProps, default as SideBarItem } from './SideBarItem';
