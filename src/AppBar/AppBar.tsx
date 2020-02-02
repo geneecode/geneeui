@@ -9,7 +9,7 @@ export interface AppBarProps extends Omit<HTMLAttributes<HTMLDivElement>, 'child
   sideNavActive?: boolean;
 }
 
-export const AppBar = forwardRef<HTMLDivElement, AppBarProps>(function(
+export const AppBar = forwardRef<HTMLDivElement, AppBarProps>(function (
   { className, logo, links, controls, userAvatar, sideNavActive = false, ...props },
   ref,
 ) {
