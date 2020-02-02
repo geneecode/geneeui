@@ -5,7 +5,7 @@ export interface LinkProps {
   children?: string;
 }
 
-export const Link: FC<LinkProps> = function({ to, children }) {
+export const Link: FC<LinkProps> = function ({ to, children }) {
   return <a href={to}>{children}</a>;
 };
 
