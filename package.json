@@ -83,7 +83,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
     "jest-environment-jsdom-fourteen": "^1.0.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "opener": "^1.5.1",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
